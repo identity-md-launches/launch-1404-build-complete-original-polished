@@ -34,6 +34,8 @@ const required = [
   "artifacts/validation.md", "artifacts/engine-tests.json", "artifacts/browser-tests.json",
   "artifacts/campaign-test.json", "artifacts/build-checks.txt",
   ".imd-responses.json", "artifacts/revision/before.json", "artifacts/revision/after.json",
+  "scripts/seed-sandbox-check.mjs", "artifacts/seed-revision/before.json",
+  "artifacts/seed-revision/after.json", "artifacts/seed-revision/build-checks.txt",
 ];
 for (const path of required) assert.ok(files.some((f) => f.path === path), path);
 const html = await readFile("dist/index.html", "utf8");
@@ -60,6 +62,7 @@ const engine = JSON.parse(await readFile("artifacts/engine-tests.json", "utf8"))
 const browser = JSON.parse(await readFile("artifacts/browser-tests.json", "utf8"));
 const campaign = JSON.parse(await readFile("artifacts/campaign-test.json", "utf8"));
 const revision = JSON.parse(await readFile("artifacts/revision/after.json", "utf8"));
+const seedRevision = JSON.parse(await readFile("artifacts/seed-revision/after.json", "utf8"));
 const responses = JSON.parse(await readFile(".imd-responses.json", "utf8")).responses;
 assert.ok(engine.results.every((r) => r.passed));
 assert.ok(browser.results.every((r) => r.passed));
@@ -72,8 +75,13 @@ assert.equal(revision.passed, true);
 assert.deepEqual(revision.errors, []);
 assert.deepEqual(revision.failedRequests, []);
 assert.equal(revision.bundleSha256, createHash("sha256").update(bundle).digest("hex"));
-assert.equal(responses.length, 4);
-assert.equal(new Set(responses.map((r) => r.finding)).size, 4);
+assert.equal(seedRevision.passed, true);
+assert.ok(seedRevision.results.every((r) => r.passed));
+assert.deepEqual(seedRevision.errors, []);
+assert.deepEqual(seedRevision.failedRequests, []);
+assert.equal(seedRevision.bundleSha256, createHash("sha256").update(bundle).digest("hex"));
+assert.equal(responses.length, 1);
+assert.equal(responses[0].finding, "faa429c6bfd7972ce07ad601e1f8019335a3b8f9922d858f77b5bafec7a7d110");
 assert.ok(responses.every((r) => /^[a-f0-9]{64}$/.test(r.finding) && r.verdict === "fixed" && r.detail.length > 0));
 assert.ok((await stat(".gitignore")).size <= 512);
 const checkedLinks = [];
@@ -100,7 +108,7 @@ const report = {
   distBytes: exportFiles.reduce((sum, f) => sum + f.bytes, 0),
   ignoreFileBytes: (await stat(".gitignore")).size, ignoreFileBudget: 512,
   relativeEntryAssets: assetUrls, manifest, exportFiles, checkedLinks,
-  verification: { engineChecks: engine.results.length, browserChecks: browser.results.length, revisionChecks: revision.results.length, reviewResponses: responses.length, campaign: campaign.outcome.mode, seed: campaign.seed, score: campaign.outcome.score },
+  verification: { engineChecks: engine.results.length, browserChecks: browser.results.length, revisionChecks: revision.results.length, seedRevisionChecks: seedRevision.results.length, reviewResponses: responses.length, campaign: campaign.outcome.mode, seed: campaign.seed, score: campaign.outcome.score },
   inventory: files.filter((f) => f.path !== reportPath),
 };
 // The self-inclusive byte total converges when its decimal digit count is stable.

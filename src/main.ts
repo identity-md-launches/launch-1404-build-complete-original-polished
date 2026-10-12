@@ -249,20 +249,33 @@ function showHelp() {
 function showSeed() {
   openDialog(
     "seed",
-    `${closeButton()}<div class="modal-emblem">${icon("seed")}</div><h2 id="dialog-title">Same seed. Shared adventure.</h2><p class="modal-lead">Every seed grows a different Lily Kingdom. Enter one to replay it or share it with a friend.</p><form id="seed-form"><label for="seed-input">Run seed</label><input id="seed-input" name="seed" type="text" maxlength="24" autocomplete="off" spellcheck="false" placeholder="e.g. GOLDEN-LILY" aria-describedby="seed-note seed-error" autofocus required><p class="field-note" id="seed-note">1–24 letters, numbers or hyphens. Case doesn’t matter.</p><p id="seed-error" class="field-error" role="status"></p><button class="primary full" type="submit">Start this seed ${icon("arrow")}</button></form>`,
+    `${closeButton()}<div class="modal-emblem">${icon("seed")}</div><h2 id="dialog-title">Same seed. Shared adventure.</h2><p class="modal-lead">Every seed grows a different Lily Kingdom. Enter one to replay it or share it with a friend.</p><form id="seed-form"><label for="seed-input">Run seed</label><input id="seed-input" name="seed" type="text" maxlength="24" autocomplete="off" spellcheck="false" placeholder="e.g. GOLDEN-LILY" aria-describedby="seed-note seed-error" autofocus required><p class="field-note" id="seed-note">1–24 letters, numbers or hyphens. Case doesn’t matter.</p><p id="seed-error" class="field-error" role="status"></p><button class="primary full" id="start-seed" type="button">Start this seed ${icon("arrow")}</button></form>`,
   );
   wireClose();
-  $("seed-form").onsubmit = (e) => {
-    e.preventDefault();
-    const field = $<HTMLInputElement>("seed-input"),
-      seed = normalizeSeed(field.value);
+  const field = $<HTMLInputElement>("seed-input");
+  const startSeed = () => {
+    const seed = normalizeSeed(field.value);
     if (!/^[A-Z0-9-]{1,24}$/.test(seed)) {
       field.setAttribute("aria-invalid", "true");
       $("seed-error").textContent = "Use 1–24 letters, numbers or hyphens.";
       field.focus();
       return;
     }
+    field.removeAttribute("aria-invalid");
+    $("seed-error").textContent = "";
     start(seed);
+  };
+  // The arcade sandbox excludes allow-forms, so launch without native submission.
+  $("start-seed").onclick = startSeed;
+  field.onkeydown = (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      startSeed();
+    }
+  };
+  $("seed-form").onsubmit = (e) => {
+    e.preventDefault();
+    startSeed();
   };
 }
 function showPause() {

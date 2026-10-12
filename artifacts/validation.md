@@ -2,9 +2,30 @@
 
 Worker report, 12 October 2026. **Complete for the stated build-worker scope.** Hosting and the registration callback remain the post-publication agent’s responsibility. This is recorded worker evidence, not an independent certification.
 
-## Revision review
+## Seed-launch revision
 
-This revision preserves the accepted engine, renderer, art and sound. It changes the four reproduced review findings in `src/main.ts` and `src/style.css`, adds a focused production-browser regression script, and rebuilds `dist/`. Review responses are in [`.imd-responses.json`](../.imd-responses.json). Inherited ignore behavior hid that required file from ordinary discovery; `.gitignore:5` explicitly includes it, within the existing 512-byte path budget in [BUDGET.md](../BUDGET.md). Original-export observations are preserved in [before.json](revision/before.json), with a bundle SHA-256; [after.json](revision/after.json) records the revised export. Baseline “passed” means the observation script completed, not that the original interface satisfied the regression assertions.
+Finding `faa429c6bfd7972ce07ad601e1f8019335a3b8f9922d858f77b5bafec7a7d110` reproduced before editing the game. The original production export was served under `/game/` in Chromium **155.0.8059.12**, at 844×600 with touch emulation, inside `sandbox="allow-scripts allow-pointer-lock"`. The parent sent `init` on channel `review` and received `ready`; no pause was sent. Clicking Start this seed and pressing Enter both left mode `title`, seed `LILY-2026` and the dialog open. A capture listener observed zero submit events, and the console reported blocked form submission. The same two actions succeeded standalone and in an `allow-forms` diagnostic control. [Before JSON and bundle hash](seed-revision/before.json), [blocked dialog](seed-revision/before-sandbox.jpg).
+
+**Fixed at `src/main.ts:252` and `src/main.ts:255`:** the action is now `type="button"`. Its click handler and the input’s Enter handler share the existing normalization, inline validation and guarded `start(seed)` call. Enter prevents the native action. Valid input clears a previous field error. The existing submit handler remains as a standalone fallback; sandbox launch does not rely on it. `start()` still checks `hostPaused` before changing the run. No engine, renderer, styles, assets or dependencies changed.
+
+The rebuilt export passes **12 focused regression groups**, using the normal animation clock and no game-state mutation: strict sandbox/standalone/`allow-forms` control × click/Enter; validation and focus at desktop/390px/568px; actual emulated touch taps; audio gesture startup; host pause blocking both launch paths; and only matching-channel resume releasing the start. Successful strict-sandbox starts select the requested seed, close the dialog, focus the canvas and emit zero submit events. Empty and invalid seeds stay in the dialog with `aria-invalid`, the existing correction text and input focus. [After JSON and bundle hash](seed-revision/after.json), [running seed](seed-revision/after-sandbox.jpg), [test script](../scripts/seed-sandbox-check.mjs). Source/typecheck/build output is retained in [build-checks.txt](seed-revision/build-checks.txt); [the response file](../.imd-responses.json) answers this revision’s finding.
+
+The pinned Better Interface guide was applied to the affected dialog, preserving its established design:
+
+| Domain | Coverage, finding and outcome |
+| --- | --- |
+| Accessibility | The reported missing sandbox activation was reproduced and fixed. Retained native button, persistent label, described inline status, focus trap/return and 16px input. Keyboard Enter, Tab/Shift+Tab support in the existing suite, invalid-field focus and canvas focus on success pass. Screen-reader and physical-device checks remain unperformed. |
+| Layout | Inspected rendered [1440×900](seed-revision/after-dialog-1440.jpg), [390×844](seed-revision/after-dialog-390.jpg) and [568×320](seed-revision/after-dialog-568.jpg) dialogs. No horizontal overflow; the 50px primary action remains reachable. The short landscape dialog scrolls to its field/action. Existing first-screen and onboarding checks also rerun. Native zoom/RTL remain unverified. |
+| Writing | Existing seed rules, action label and actionable error retained. README’s obsolete sandbox limitation replaced with the verified behavior. No new product copy. |
+| Typography | Same Outfit font and type scale; computed input size is 16px at all three dialog sizes. Existing wrapping and spacing preserved. |
+| Colors | No token changes. Existing browser suite remeasures its solid foreground/background pairs. No new contrast claim for the blurred game backdrop. |
+| UI | Button/touch/keyboard start, error recovery, dialog close, audio gesture and host-pause feedback checked. Screenshots reviewed after waiting for the iframe to paint the latest field/focus state. No animation-panel or hardware performance certification. |
+
+The sandbox still logs Chromium’s native cross-origin autofocus warning; the game’s existing explicit focus call succeeds and is asserted. This is separate from the repaired submission failure: the final focused run has **zero blocked-submission messages, JavaScript exceptions or failed asset requests**. Testing here used Chromium 155, not the reviewer’s Chromium 156 or WebKit. No physical mobile keyboard, Safari or Firefox run is claimed.
+
+## Previous revision review (retained history)
+
+The previous revision preserved the accepted engine, renderer, art and sound while correcting four findings in `src/main.ts` and `src/style.css`. Its changes and evidence are retained below; its regression script has been rerun against the current export. Inherited ignore behavior hid the required response file from ordinary discovery; `.gitignore:5` explicitly includes it, within the existing 512-byte path budget in [BUDGET.md](../BUDGET.md). Original-export observations are preserved in [before.json](revision/before.json), with a bundle SHA-256; [after.json](revision/after.json) records the current recheck. Baseline “passed” means the observation script completed, not that the original interface satisfied the regression assertions.
 
 | Finding | Reproduction, correction and evidence |
 | --- | --- |
@@ -28,7 +49,7 @@ The baseline used Chromium 141.0.7390.37. The final checks select installed Chro
 
 Final corrective locations: `src/style.css:1623` (compact landscape frame/HUD/overlays), `src/style.css:1846` (tutorial position), `src/style.css:1852` (intro sequencing and portrait hint), `src/style.css:1880` (seed field/time), `src/main.ts:147` (host-pause guard), `src/main.ts:32` (title copy), and `src/style.css:128`, `:237`, `:352`, `:1399` (title weights).
 
-**Additional limitation outside the requested fixes:** Chromium blocks native Enter seed form submission inside `sandbox="allow-scripts allow-pointer-lock"` because `allow-forms` is absent. The normal site’s seed form works. An extra probe opened Enter seed, filled `PAUSED-SEED`, clicked Start this seed before and after a parent resume, and logged the browser’s blocked-submission message and unchanged title mode ([actual probe output](revision/sandbox-seed-probe.txt)). The original form implementation remains unchanged in this revision; sandbox validation covers random starts, same-seed restart and the bridge, not successful custom-seed submission. This limitation supersedes any broader reading of the original build’s completion statement.
+**Historical limitation, now fixed:** the previous revision’s extra [sandbox probe](revision/sandbox-seed-probe.txt) found blocked native seed submission. The seed-launch revision above reproduces and resolves it; the probe remains as historical evidence.
 
 ## Scope and decisions
 
@@ -70,21 +91,22 @@ The following is the retained initial-build review. Source line numbers here ref
 
 ## Actual verification
 
-The revision build used Node/npm with dependencies installed outside the repository (`PEPE_DEP_ROOT=/tmp/pepe-revision-toolchain`). Browser checks selected `/opt/ms-playwright/chromium-1247/chrome-linux64/chrome` with `PLAYWRIGHT_EXECUTABLE_PATH`. Equivalent normal-install commands are documented in the README.
+The seed-launch build used Node v24.21.0/npm 11.19.0 with the unchanged lockfile installed outside the repository (`PEPE_DEP_ROOT=/tmp/pepe-seed-toolchain`). Browser checks selected `/root/.cache/ms-playwright/chromium-1247/chrome-linux64/chrome` through `PLAYWRIGHT_EXECUTABLE_PATH`. Equivalent normal-install commands are documented in the README.
 
 | Command | Actual result / evidence |
 | --- | --- |
-| `npm run typecheck` | Passed, no TypeScript diagnostics. [Captured output](build-checks.txt). |
-| `npm run build` | Passed, Vite 7.1.12. Single locally bundled Three.js/game script and complete static export. [Captured output](build-checks.txt). |
+| `npm run typecheck` | Passed, no TypeScript diagnostics. [Current captured output](seed-revision/build-checks.txt). |
+| `npm run build` | Passed, Vite 7.1.12. Single locally bundled Three.js/game script and complete static export. [Current captured output](seed-revision/build-checks.txt). |
 | `npm test` | **15 checks passed**, including 8,000 generated layouts, jump timing, powers, enemies, pause, bonus persistence, lives and all bosses/progression. [JSON](engine-tests.json). Targeted model tests sometimes position entities directly to isolate a rule; they are not a substitute for browser play. |
 | `node scripts/revision-check.mjs` | **11 regression groups passed** in Chromium 155.0.8059.12. Title copy/weights, landscape/portrait onboarding, maximum seed, host pause across restart/title, accepted parent resume and subsequent local restart. [JSON](revision/after.json), with bundle hash, measured bounds and no script errors or failed requests. |
+| `node scripts/seed-sandbox-check.mjs` | **12 regression groups passed** in Chromium 155.0.8059.12. Strict sandbox seeded starts, standalone and allow-forms controls, pointer/Enter/touch, empty/invalid recovery, focus, audio gestures and parent-pause guards. [JSON](seed-revision/after.json). The original export’s `--baseline` run records six reproduction/control cases in [before.json](seed-revision/before.json). |
 | `node scripts/browser-check.mjs` | **18 checks passed** in Chromium 155.0.8059.12 with a normal animation clock: responsive layout, standalone seed entry, keyboard/touch, gesture audio, focus, mute, quality, natural game-over and replay, reduced motion, sandbox bridge. Long game-over checks use Low quality through the settings UI. No JavaScript errors or failed resource requests. [JSON](browser-tests.json). |
 | `node scripts/campaign-check.mjs` | **Passed all eight levels and victory replay**, seed `POND-12`, score **67,974**, one life remaining, 316.61 simulated gameplay seconds. [JSON](campaign-test.json). Real production browser with controlled 120 Hz animation clock, synthetic keyboard input and read-only diagnostics. Every simulation/UI/scene frame runs; software WebGL rasterizes every twelfth frame. No game-state mutation. This is not a hardware FPS or human pacing measurement. |
 | `node scripts/audit.mjs` | File sizes, relative entry references, manifest assets, original cover dimensions, metadata, required evidence links, public/export equivalence and export SHA-256 inventory are recorded in [export audit](export-audit.json). |
 
 The normal browser check exercises `sandbox="allow-scripts allow-pointer-lock"`, denied localStorage, channel handshake, rejection of wrong channel and wrong source, host pause/resume, one finite nonnegative integer score on game over, and subsequent replay. Audio is unstarted before a gesture, starts from a click, and mute survives a reload when storage is available. Touch uses Chromium’s real touch event dispatch with simultaneous movement/jump and cancellation.
 
-The initial build’s evidence included navigation using the supplied browser tool. This revision uses real Chromium through the repeatable Playwright scripts, then opens the saved screenshots for visual review. Software WebGL can emit GPU/readback performance warnings; the separate sandbox seed-form limitation is recorded above.
+The initial build’s evidence included navigation using the supplied browser tool. This revision uses real Chromium through the repeatable Playwright scripts, then opens the saved screenshots for visual review. Software WebGL can emit GPU/readback performance warnings; the harmless native autofocus warning is documented above.
 
 ## Evidence gallery
 
@@ -94,6 +116,6 @@ The initial build’s evidence included navigation using the supplied browser to
 
 ## Remaining limits and handoff
 
-All four revision findings are fixed and the listed checks are complete. The sandbox native seed-form limitation documented above remains outside this bounded revision. Hardware 60 FPS, physical iOS/Android, Safari/Firefox, screen-reader gameplay, native 200% zoom and a human 8–12 minute pacing study remain unverified. The browser campaign is a fast input-driven route, not a claim that every possible generated layout has been completed by a person. Current tests are useful evidence, not a proof of universal playability or full accessibility conformance.
+The current seed-launch finding is fixed; the previous four corrections remain intact. Hardware 60 FPS, physical iOS/Android, Safari/Firefox, screen-reader gameplay, native 200% zoom and a human 8–12 minute pacing study remain unverified. The browser campaign is a fast input-driven route, not a claim that every possible generated layout has been completed by a person. Current tests are useful evidence, not a proof of universal playability or full accessibility conformance.
 
 **Registration pending: post-publication agent required.** After hosting, the coordinating agent must run `npm run release -- --job JOB_UUID` in the template repository with the actual admitted job ID, preserve the private receipt, and report website, Explorer link, submission ID and actual review status. Use the same command/ID/capability for backoff retries of timeouts, 429 and 5xx. The complete instructions are in [README.md](../README.md#publish-and-finish-registration). No public credential, invented CID or registration callback is embedded in this export.

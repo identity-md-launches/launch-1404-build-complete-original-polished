@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-12T13:25:37.810Z",
+  "date": "2026-10-12T13:53:07.354Z",
   "command": "node scripts/campaign-check.mjs",
   "seed": "POND-12",
   "method": "Real Chromium production export; controlled 120 Hz requestAnimationFrame clock; read-only diagnostics and synthetic keyboard events. No game state mutation. Low quality software WebGL; every twelfth frame rasterized, with every physics/UI/scene frame executed. This is an input-driven campaign test, not a human pacing or hardware FPS measurement.",

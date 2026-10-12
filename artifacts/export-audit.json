@@ -1,17 +1,17 @@
 {
-  "date": "2026-10-12T13:27:45.862Z",
+  "date": "2026-10-12T13:53:33.719Z",
   "command": "node scripts/audit.mjs",
   "passed": true,
   "basis": "Uncompressed bytes of all deliverable files, including this report. Repository metadata, private inputs, dependency/cache directories and disposable test/scratch are excluded without reading their contents. No Git mutation was performed.",
   "limitBytes": 8388608,
-  "totalBytes": 3305252,
-  "remainingBytes": 5083356,
-  "distBytes": 640918,
+  "totalBytes": 3502398,
+  "remainingBytes": 4886210,
+  "distBytes": 641104,
   "ignoreFileBytes": 222,
   "ignoreFileBudget": 512,
   "relativeEntryAssets": [
     "./favicon.svg",
-    "./assets/index-BOG-vwrH.js",
+    "./assets/index-zIDy6t0z.js",
     "./cover.svg"
   ],
   "manifest": {
@@ -29,9 +29,9 @@
   },
   "exportFiles": [
     {
-      "path": "dist/assets/index-BOG-vwrH.js",
-      "bytes": 627516,
-      "sha256": "41585b8852c015a44954c7139a1b8cca9be3b652d2990ec5f77be16cbfcca83f"
+      "path": "dist/assets/index-zIDy6t0z.js",
+      "bytes": 627702,
+      "sha256": "b8a350c49713c9b03e9650d78d4268650b69e687933fbfdd2167264db5585a79"
     },
     {
       "path": "dist/cover.svg",
@@ -51,7 +51,7 @@
     {
       "path": "dist/index.html",
       "bytes": 1208,
-      "sha256": "14f7d0ce48e23296fd5dbaf1021afc79733f2a6bdd0f822fedaf29bc4aec4ee1"
+      "sha256": "60170f718a11739488903359ba461900825b2279b0967dae769754e806c49d41"
     },
     {
       "path": "dist/licenses/three-MIT.txt",
@@ -88,6 +88,18 @@
     {
       "from": "README.md",
       "to": "artifacts/revision/before.json"
+    },
+    {
+      "from": "README.md",
+      "to": "artifacts/seed-revision/after.json"
+    },
+    {
+      "from": "README.md",
+      "to": "artifacts/seed-revision/before.json"
+    },
+    {
+      "from": "README.md",
+      "to": "artifacts/seed-revision/build-checks.txt"
     },
     {
       "from": "README.md",
@@ -135,7 +147,43 @@
     },
     {
       "from": "artifacts/validation.md",
+      "to": "artifacts/seed-revision/before.json"
+    },
+    {
+      "from": "artifacts/validation.md",
+      "to": "artifacts/seed-revision/before-sandbox.jpg"
+    },
+    {
+      "from": "artifacts/validation.md",
+      "to": "artifacts/seed-revision/after.json"
+    },
+    {
+      "from": "artifacts/validation.md",
+      "to": "artifacts/seed-revision/after-sandbox.jpg"
+    },
+    {
+      "from": "artifacts/validation.md",
+      "to": "scripts/seed-sandbox-check.mjs"
+    },
+    {
+      "from": "artifacts/validation.md",
+      "to": "artifacts/seed-revision/build-checks.txt"
+    },
+    {
+      "from": "artifacts/validation.md",
       "to": ".imd-responses.json"
+    },
+    {
+      "from": "artifacts/validation.md",
+      "to": "artifacts/seed-revision/after-dialog-1440.jpg"
+    },
+    {
+      "from": "artifacts/validation.md",
+      "to": "artifacts/seed-revision/after-dialog-390.jpg"
+    },
+    {
+      "from": "artifacts/validation.md",
+      "to": "artifacts/seed-revision/after-dialog-568.jpg"
     },
     {
       "from": "artifacts/validation.md",
@@ -263,11 +311,11 @@
     },
     {
       "from": "artifacts/validation.md",
-      "to": "artifacts/build-checks.txt"
+      "to": "artifacts/seed-revision/build-checks.txt"
     },
     {
       "from": "artifacts/validation.md",
-      "to": "artifacts/build-checks.txt"
+      "to": "artifacts/seed-revision/build-checks.txt"
     },
     {
       "from": "artifacts/validation.md",
@@ -276,6 +324,14 @@
     {
       "from": "artifacts/validation.md",
       "to": "artifacts/revision/after.json"
+    },
+    {
+      "from": "artifacts/validation.md",
+      "to": "artifacts/seed-revision/after.json"
+    },
+    {
+      "from": "artifacts/validation.md",
+      "to": "artifacts/seed-revision/before.json"
     },
     {
       "from": "artifacts/validation.md",
@@ -354,7 +410,8 @@
     "engineChecks": 15,
     "browserChecks": 18,
     "revisionChecks": 11,
-    "reviewResponses": 4,
+    "seedRevisionChecks": 12,
+    "reviewResponses": 1,
     "campaign": "won",
     "seed": "POND-12",
     "score": 67974
@@ -366,11 +423,11 @@
     },
     {
       "path": ".imd-responses.json",
-      "bytes": 2738
+      "bytes": 1234
     },
     {
       "path": "artifacts/bog-king.jpg",
-      "bytes": 62135
+      "bytes": 62165
     },
     {
       "path": "artifacts/browser-tests.json",
@@ -386,7 +443,7 @@
     },
     {
       "path": "artifacts/desktop-title.jpg",
-      "bytes": 101948
+      "bytes": 101966
     },
     {
       "path": "artifacts/engine-tests.json",
@@ -394,43 +451,43 @@
     },
     {
       "path": "artifacts/game-over.jpg",
-      "bytes": 39672
+      "bytes": 39573
     },
     {
       "path": "artifacts/mobile-game.jpg",
-      "bytes": 35619
+      "bytes": 35399
     },
     {
       "path": "artifacts/mobile-title.jpg",
-      "bytes": 48348
+      "bytes": 48314
     },
     {
       "path": "artifacts/narrow-long-seed.jpg",
-      "bytes": 38992
+      "bytes": 39054
     },
     {
       "path": "artifacts/pause-menu.jpg",
-      "bytes": 38396
+      "bytes": 38766
     },
     {
       "path": "artifacts/revision/after-intro-390.jpg",
-      "bytes": 38159
+      "bytes": 38296
     },
     {
       "path": "artifacts/revision/after-intro-568.jpg",
-      "bytes": 27228
+      "bytes": 27780
     },
     {
       "path": "artifacts/revision/after-intro-667.jpg",
-      "bytes": 33345
+      "bytes": 33304
     },
     {
       "path": "artifacts/revision/after-intro-740.jpg",
-      "bytes": 45643
+      "bytes": 44504
     },
     {
       "path": "artifacts/revision/after-intro-844.jpg",
-      "bytes": 39306
+      "bytes": 39061
     },
     {
       "path": "artifacts/revision/after-landscape-title-390.jpg",
@@ -458,31 +515,31 @@
     },
     {
       "path": "artifacts/revision/after-title-1440.jpg",
-      "bytes": 96509
+      "bytes": 96587
     },
     {
       "path": "artifacts/revision/after-title-390.jpg",
-      "bytes": 45902
+      "bytes": 45856
     },
     {
       "path": "artifacts/revision/after-tutorial-390.jpg",
-      "bytes": 37143
+      "bytes": 37211
     },
     {
       "path": "artifacts/revision/after-tutorial-568.jpg",
-      "bytes": 28115
+      "bytes": 28187
     },
     {
       "path": "artifacts/revision/after-tutorial-667.jpg",
-      "bytes": 33257
+      "bytes": 33230
     },
     {
       "path": "artifacts/revision/after-tutorial-740.jpg",
-      "bytes": 44961
+      "bytes": 43897
     },
     {
       "path": "artifacts/revision/after-tutorial-844.jpg",
-      "bytes": 39509
+      "bytes": 39237
     },
     {
       "path": "artifacts/revision/after.json",
@@ -578,15 +635,47 @@
     },
     {
       "path": "artifacts/sandbox-game-over.jpg",
-      "bytes": 42934
+      "bytes": 31716
+    },
+    {
+      "path": "artifacts/seed-revision/after-dialog-1440.jpg",
+      "bytes": 46508
+    },
+    {
+      "path": "artifacts/seed-revision/after-dialog-390.jpg",
+      "bytes": 28852
+    },
+    {
+      "path": "artifacts/seed-revision/after-dialog-568.jpg",
+      "bytes": 19326
+    },
+    {
+      "path": "artifacts/seed-revision/after-sandbox.jpg",
+      "bytes": 46793
+    },
+    {
+      "path": "artifacts/seed-revision/after.json",
+      "bytes": 10800
+    },
+    {
+      "path": "artifacts/seed-revision/before-sandbox.jpg",
+      "bytes": 32489
+    },
+    {
+      "path": "artifacts/seed-revision/before.json",
+      "bytes": 5721
+    },
+    {
+      "path": "artifacts/seed-revision/build-checks.txt",
+      "bytes": 1091
     },
     {
       "path": "artifacts/touch-landscape.jpg",
-      "bytes": 39137
+      "bytes": 38636
     },
     {
       "path": "artifacts/validation.md",
-      "bytes": 20096
+      "bytes": 24385
     },
     {
       "path": "artifacts/victory.jpg",
@@ -594,19 +683,19 @@
     },
     {
       "path": "artifacts/world-1.jpg",
-      "bytes": 66208
+      "bytes": 66125
     },
     {
       "path": "artifacts/world-2.jpg",
-      "bytes": 64724
+      "bytes": 64735
     },
     {
       "path": "artifacts/world-3.jpg",
-      "bytes": 66175
+      "bytes": 66173
     },
     {
       "path": "artifacts/world-4.jpg",
-      "bytes": 57931
+      "bytes": 57885
     },
     {
       "path": "BUDGET.md",
@@ -614,11 +703,11 @@
     },
     {
       "path": "DESIGN.md",
-      "bytes": 10389
+      "bytes": 10956
     },
     {
-      "path": "dist/assets/index-BOG-vwrH.js",
-      "bytes": 627516
+      "path": "dist/assets/index-zIDy6t0z.js",
+      "bytes": 627702
     },
     {
       "path": "dist/cover.svg",
@@ -682,11 +771,11 @@
     },
     {
       "path": "README.md",
-      "bytes": 12419
+      "bytes": 13084
     },
     {
       "path": "scripts/audit.mjs",
-      "bytes": 7180
+      "bytes": 7806
     },
     {
       "path": "scripts/browser-check.mjs",
@@ -703,6 +792,10 @@
     {
       "path": "scripts/revision-check.mjs",
       "bytes": 12644
+    },
+    {
+      "path": "scripts/seed-sandbox-check.mjs",
+      "bytes": 11655
     },
     {
       "path": "scripts/tasks.mjs",
@@ -738,7 +831,7 @@
     },
     {
       "path": "src/main.ts",
-      "bytes": 28257
+      "bytes": 28642
     },
     {
       "path": "src/storage.ts",

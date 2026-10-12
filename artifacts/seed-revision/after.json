@@ -1,0 +1,432 @@
+{
+  "date": "2026-10-12T13:51:17.214Z",
+  "command": "node scripts/seed-sandbox-check.mjs",
+  "browser": "155.0.8059.12",
+  "viewport": "844x600 with touch, plus listed layout checks",
+  "bundleSha256": "b8a350c49713c9b03e9650d78d4268650b69e687933fbfdd2167264db5585a79",
+  "baseline": false,
+  "passed": true,
+  "results": [
+    {
+      "name": "sandbox: click starts seed",
+      "passed": true,
+      "before": {
+        "mode": "title",
+        "seed": "LILY-2026",
+        "audio": "unstarted",
+        "elapsed": 0,
+        "storagePersistent": false,
+        "dialog": true,
+        "focused": "seed-input",
+        "error": "",
+        "invalid": null,
+        "submits": 0
+      },
+      "after": {
+        "mode": "playing",
+        "seed": "GOLDEN-LILY",
+        "audio": "running",
+        "elapsed": 0,
+        "storagePersistent": false,
+        "dialog": false,
+        "focused": "game",
+        "error": "",
+        "invalid": null,
+        "submits": 0
+      }
+    },
+    {
+      "name": "sandbox: enter starts seed",
+      "passed": true,
+      "before": {
+        "mode": "title",
+        "seed": "LILY-2026",
+        "audio": "unstarted",
+        "elapsed": 0,
+        "storagePersistent": false,
+        "dialog": true,
+        "focused": "seed-input",
+        "error": "",
+        "invalid": null,
+        "submits": 0
+      },
+      "after": {
+        "mode": "playing",
+        "seed": "GOLDEN-LILY",
+        "audio": "running",
+        "elapsed": 0,
+        "storagePersistent": false,
+        "dialog": false,
+        "focused": "game",
+        "error": "",
+        "invalid": null,
+        "submits": 0
+      }
+    },
+    {
+      "name": "standalone: click starts seed",
+      "passed": true,
+      "before": {
+        "mode": "title",
+        "seed": "LILY-2026",
+        "audio": "unstarted",
+        "elapsed": 0,
+        "storagePersistent": true,
+        "dialog": true,
+        "focused": "seed-input",
+        "error": "",
+        "invalid": null,
+        "submits": 0
+      },
+      "after": {
+        "mode": "playing",
+        "seed": "GOLDEN-LILY",
+        "audio": "running",
+        "elapsed": 0,
+        "storagePersistent": true,
+        "dialog": false,
+        "focused": "game",
+        "error": "",
+        "invalid": null,
+        "submits": 0
+      }
+    },
+    {
+      "name": "standalone: enter starts seed",
+      "passed": true,
+      "before": {
+        "mode": "title",
+        "seed": "LILY-2026",
+        "audio": "unstarted",
+        "elapsed": 0,
+        "storagePersistent": true,
+        "dialog": true,
+        "focused": "seed-input",
+        "error": "",
+        "invalid": null,
+        "submits": 0
+      },
+      "after": {
+        "mode": "playing",
+        "seed": "GOLDEN-LILY",
+        "audio": "running",
+        "elapsed": 0,
+        "storagePersistent": true,
+        "dialog": false,
+        "focused": "game",
+        "error": "",
+        "invalid": null,
+        "submits": 0
+      }
+    },
+    {
+      "name": "forms-control: click starts seed",
+      "passed": true,
+      "before": {
+        "mode": "title",
+        "seed": "LILY-2026",
+        "audio": "unstarted",
+        "elapsed": 0,
+        "storagePersistent": false,
+        "dialog": true,
+        "focused": "seed-input",
+        "error": "",
+        "invalid": null,
+        "submits": 0
+      },
+      "after": {
+        "mode": "playing",
+        "seed": "GOLDEN-LILY",
+        "audio": "running",
+        "elapsed": 0,
+        "storagePersistent": false,
+        "dialog": false,
+        "focused": "game",
+        "error": "",
+        "invalid": null,
+        "submits": 0
+      }
+    },
+    {
+      "name": "forms-control: enter starts seed",
+      "passed": true,
+      "before": {
+        "mode": "title",
+        "seed": "LILY-2026",
+        "audio": "unstarted",
+        "elapsed": 0,
+        "storagePersistent": false,
+        "dialog": true,
+        "focused": "seed-input",
+        "error": "",
+        "invalid": null,
+        "submits": 0
+      },
+      "after": {
+        "mode": "playing",
+        "seed": "GOLDEN-LILY",
+        "audio": "running",
+        "elapsed": 0,
+        "storagePersistent": false,
+        "dialog": false,
+        "focused": "game",
+        "error": "",
+        "invalid": null,
+        "submits": 0
+      }
+    },
+    {
+      "name": "1440x900: validation, focus, normalization and click start",
+      "passed": true,
+      "layout": {
+        "viewport": [
+          1440,
+          900
+        ],
+        "width": 1440,
+        "input": {
+          "x": 515,
+          "y": 490.4375,
+          "width": 410,
+          "height": 54,
+          "top": 490.4375,
+          "right": 925,
+          "bottom": 544.4375,
+          "left": 515
+        },
+        "action": {
+          "x": 515,
+          "y": 620.71875,
+          "width": 410,
+          "height": 50,
+          "top": 620.71875,
+          "right": 925,
+          "bottom": 670.71875,
+          "left": 515
+        },
+        "inputFontSize": "16px",
+        "focused": true,
+        "focusOutline": "rgb(255, 240, 172) solid 3px",
+        "accessibleLabel": "Run seed"
+      },
+      "started": {
+        "mode": "playing",
+        "seed": "GOLDEN-LILY",
+        "audio": "running",
+        "elapsed": 0,
+        "storagePersistent": false,
+        "dialog": false,
+        "focused": "game",
+        "error": "",
+        "invalid": null,
+        "submits": 0
+      }
+    },
+    {
+      "name": "390x844: validation, focus, normalization and tap start",
+      "passed": true,
+      "layout": {
+        "viewport": [
+          390,
+          844
+        ],
+        "width": 390,
+        "input": {
+          "x": 41,
+          "y": 457.9375,
+          "width": 308,
+          "height": 54,
+          "top": 457.9375,
+          "right": 349,
+          "bottom": 511.9375,
+          "left": 41
+        },
+        "action": {
+          "x": 41,
+          "y": 588.21875,
+          "width": 308,
+          "height": 50,
+          "top": 588.21875,
+          "right": 349,
+          "bottom": 638.21875,
+          "left": 41
+        },
+        "inputFontSize": "16px",
+        "focused": true,
+        "focusOutline": "rgb(255, 240, 172) solid 3px",
+        "accessibleLabel": "Run seed"
+      },
+      "started": {
+        "mode": "playing",
+        "seed": "GOLDEN-LILY",
+        "audio": "running",
+        "elapsed": 0,
+        "storagePersistent": false,
+        "dialog": false,
+        "focused": "game",
+        "error": "",
+        "invalid": null,
+        "submits": 0
+      }
+    },
+    {
+      "name": "568x320: validation, focus, normalization and tap start",
+      "passed": true,
+      "layout": {
+        "viewport": [
+          568,
+          320
+        ],
+        "width": 568,
+        "input": {
+          "x": 75,
+          "y": 101.96875,
+          "width": 418,
+          "height": 54,
+          "top": 101.96875,
+          "right": 493,
+          "bottom": 155.96875,
+          "left": 75
+        },
+        "action": {
+          "x": 75,
+          "y": 232.25,
+          "width": 418,
+          "height": 50,
+          "top": 232.25,
+          "right": 493,
+          "bottom": 282.25,
+          "left": 75
+        },
+        "inputFontSize": "16px",
+        "focused": true,
+        "focusOutline": "rgb(255, 240, 172) solid 3px",
+        "accessibleLabel": "Run seed"
+      },
+      "started": {
+        "mode": "playing",
+        "seed": "GOLDEN-LILY",
+        "audio": "running",
+        "elapsed": 0,
+        "storagePersistent": false,
+        "dialog": false,
+        "focused": "game",
+        "error": "",
+        "invalid": null,
+        "submits": 0
+      }
+    },
+    {
+      "name": "Host pause guards seed click",
+      "passed": true,
+      "guarded": {
+        "mode": "title",
+        "seed": "LILY-2026",
+        "audio": "unstarted",
+        "elapsed": 0,
+        "storagePersistent": false,
+        "dialog": true,
+        "focused": "start-seed",
+        "error": "",
+        "invalid": null,
+        "submits": 0
+      }
+    },
+    {
+      "name": "Host pause guards seed enter",
+      "passed": true,
+      "guarded": {
+        "mode": "title",
+        "seed": "LILY-2026",
+        "audio": "unstarted",
+        "elapsed": 0,
+        "storagePersistent": false,
+        "dialog": true,
+        "focused": "seed-input",
+        "error": "",
+        "invalid": null,
+        "submits": 0
+      }
+    },
+    {
+      "name": "Only matching parent resume releases seeded start",
+      "passed": true,
+      "resumed": {
+        "mode": "playing",
+        "seed": "PAUSED-SEED",
+        "audio": "running",
+        "elapsed": 0.19999999999999998,
+        "storagePersistent": false,
+        "dialog": false,
+        "focused": "game",
+        "error": "",
+        "invalid": null,
+        "submits": 0
+      }
+    }
+  ],
+  "errors": [],
+  "consoleMessages": [
+    {
+      "kind": "sandbox",
+      "type": "error",
+      "text": "Blocked autofocusing on a <input> element in a cross-origin subframe."
+    },
+    {
+      "kind": "sandbox",
+      "type": "error",
+      "text": "Blocked autofocusing on a <input> element in a cross-origin subframe."
+    },
+    {
+      "kind": "forms-control",
+      "type": "error",
+      "text": "Blocked autofocusing on a <input> element in a cross-origin subframe."
+    },
+    {
+      "kind": "forms-control",
+      "type": "error",
+      "text": "Blocked autofocusing on a <input> element in a cross-origin subframe."
+    },
+    {
+      "kind": "sandbox",
+      "type": "error",
+      "text": "Blocked autofocusing on a <input> element in a cross-origin subframe."
+    },
+    {
+      "kind": "sandbox",
+      "type": "error",
+      "text": "Blocked autofocusing on a <input> element in a cross-origin subframe."
+    },
+    {
+      "kind": "sandbox",
+      "type": "error",
+      "text": "Blocked autofocusing on a <input> element in a cross-origin subframe."
+    },
+    {
+      "kind": "sandbox",
+      "type": "error",
+      "text": "Blocked autofocusing on a <input> element in a cross-origin subframe."
+    },
+    {
+      "kind": "sandbox",
+      "type": "error",
+      "text": "Blocked autofocusing on a <input> element in a cross-origin subframe."
+    },
+    {
+      "kind": "sandbox",
+      "type": "error",
+      "text": "Blocked autofocusing on a <input> element in a cross-origin subframe."
+    },
+    {
+      "kind": "sandbox",
+      "type": "error",
+      "text": "Blocked autofocusing on a <input> element in a cross-origin subframe."
+    }
+  ],
+  "failedRequests": [],
+  "limitations": [
+    "Chromium software WebGL and emulated touch; no physical phone or WebKit/Firefox run.",
+    "Normal animation clock; no game-state mutation. Submit observer only counts events.",
+    "Baseline pass means the reported failure reproduced and diagnostic controls succeeded."
+  ]
+}

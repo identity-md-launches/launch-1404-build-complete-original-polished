@@ -1,8 +1,8 @@
 {
-  "date": "2026-10-12T12:56:53.530Z",
+  "date": "2026-10-12T13:49:50.671Z",
   "command": "node scripts/revision-check.mjs",
   "browser": "155.0.8059.12",
-  "bundleSha256": "41585b8852c015a44954c7139a1b8cca9be3b652d2990ec5f77be16cbfcca83f",
+  "bundleSha256": "b8a350c49713c9b03e9650d78d4268650b69e687933fbfdd2167264db5585a79",
   "baseline": false,
   "passed": true,
   "results": [
@@ -1471,15 +1471,15 @@
       "name": "host pause survives restart",
       "paused": {
         "mode": "paused",
-        "elapsed": 0.21666666666666665
+        "elapsed": 0.09999999999999999
       },
       "resume": {
         "mode": "paused",
-        "elapsed": 0.21666666666666665
+        "elapsed": 0.09999999999999999
       },
       "restart": {
         "mode": "paused",
-        "elapsed": 0.21666666666666665
+        "elapsed": 0.09999999999999999
       },
       "messages": [
         {

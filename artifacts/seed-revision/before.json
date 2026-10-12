@@ -1,0 +1,218 @@
+{
+  "date": "2026-10-12T13:47:13.493Z",
+  "command": "node scripts/seed-sandbox-check.mjs --baseline",
+  "browser": "155.0.8059.12",
+  "viewport": "844x600 with touch, plus listed layout checks",
+  "bundleSha256": "41585b8852c015a44954c7139a1b8cca9be3b652d2990ec5f77be16cbfcca83f",
+  "baseline": true,
+  "passed": true,
+  "results": [
+    {
+      "name": "sandbox: click reproduces blocked launch",
+      "passed": true,
+      "before": {
+        "mode": "title",
+        "seed": "LILY-2026",
+        "audio": "unstarted",
+        "elapsed": 0,
+        "storagePersistent": false,
+        "dialog": true,
+        "focused": "seed-input",
+        "error": "",
+        "invalid": null,
+        "submits": 0
+      },
+      "after": {
+        "mode": "title",
+        "seed": "LILY-2026",
+        "audio": "unstarted",
+        "elapsed": 0,
+        "storagePersistent": false,
+        "dialog": true,
+        "focused": "",
+        "error": "",
+        "invalid": null,
+        "submits": 0
+      }
+    },
+    {
+      "name": "sandbox: enter reproduces blocked launch",
+      "passed": true,
+      "before": {
+        "mode": "title",
+        "seed": "LILY-2026",
+        "audio": "unstarted",
+        "elapsed": 0,
+        "storagePersistent": false,
+        "dialog": true,
+        "focused": "seed-input",
+        "error": "",
+        "invalid": null,
+        "submits": 0
+      },
+      "after": {
+        "mode": "title",
+        "seed": "LILY-2026",
+        "audio": "unstarted",
+        "elapsed": 0,
+        "storagePersistent": false,
+        "dialog": true,
+        "focused": "seed-input",
+        "error": "",
+        "invalid": null,
+        "submits": 0
+      }
+    },
+    {
+      "name": "standalone: click starts seed",
+      "passed": true,
+      "before": {
+        "mode": "title",
+        "seed": "LILY-2026",
+        "audio": "unstarted",
+        "elapsed": 0,
+        "storagePersistent": true,
+        "dialog": true,
+        "focused": "seed-input",
+        "error": "",
+        "invalid": null,
+        "submits": 0
+      },
+      "after": {
+        "mode": "playing",
+        "seed": "GOLDEN-LILY",
+        "audio": "running",
+        "elapsed": 0.21666666666666665,
+        "storagePersistent": true,
+        "dialog": false,
+        "focused": "game",
+        "error": "",
+        "invalid": null,
+        "submits": 1
+      }
+    },
+    {
+      "name": "standalone: enter starts seed",
+      "passed": true,
+      "before": {
+        "mode": "title",
+        "seed": "LILY-2026",
+        "audio": "unstarted",
+        "elapsed": 0,
+        "storagePersistent": true,
+        "dialog": true,
+        "focused": "seed-input",
+        "error": "",
+        "invalid": null,
+        "submits": 0
+      },
+      "after": {
+        "mode": "playing",
+        "seed": "GOLDEN-LILY",
+        "audio": "running",
+        "elapsed": 0,
+        "storagePersistent": true,
+        "dialog": false,
+        "focused": "game",
+        "error": "",
+        "invalid": null,
+        "submits": 1
+      }
+    },
+    {
+      "name": "forms-control: click starts seed",
+      "passed": true,
+      "before": {
+        "mode": "title",
+        "seed": "LILY-2026",
+        "audio": "unstarted",
+        "elapsed": 0,
+        "storagePersistent": false,
+        "dialog": true,
+        "focused": "seed-input",
+        "error": "",
+        "invalid": null,
+        "submits": 0
+      },
+      "after": {
+        "mode": "playing",
+        "seed": "GOLDEN-LILY",
+        "audio": "running",
+        "elapsed": 0,
+        "storagePersistent": false,
+        "dialog": false,
+        "focused": "game",
+        "error": "",
+        "invalid": null,
+        "submits": 1
+      }
+    },
+    {
+      "name": "forms-control: enter starts seed",
+      "passed": true,
+      "before": {
+        "mode": "title",
+        "seed": "LILY-2026",
+        "audio": "unstarted",
+        "elapsed": 0,
+        "storagePersistent": false,
+        "dialog": true,
+        "focused": "seed-input",
+        "error": "",
+        "invalid": null,
+        "submits": 0
+      },
+      "after": {
+        "mode": "playing",
+        "seed": "GOLDEN-LILY",
+        "audio": "running",
+        "elapsed": 0.21666666666666665,
+        "storagePersistent": false,
+        "dialog": false,
+        "focused": "game",
+        "error": "",
+        "invalid": null,
+        "submits": 1
+      }
+    }
+  ],
+  "errors": [],
+  "consoleMessages": [
+    {
+      "kind": "sandbox",
+      "type": "error",
+      "text": "Blocked autofocusing on a <input> element in a cross-origin subframe."
+    },
+    {
+      "kind": "sandbox",
+      "type": "error",
+      "text": "Blocked form submission to '' because the form's frame is sandboxed and the 'allow-forms' permission is not set."
+    },
+    {
+      "kind": "sandbox",
+      "type": "error",
+      "text": "Blocked autofocusing on a <input> element in a cross-origin subframe."
+    },
+    {
+      "kind": "sandbox",
+      "type": "error",
+      "text": "Blocked form submission to '' because the form's frame is sandboxed and the 'allow-forms' permission is not set."
+    },
+    {
+      "kind": "forms-control",
+      "type": "error",
+      "text": "Blocked autofocusing on a <input> element in a cross-origin subframe."
+    },
+    {
+      "kind": "forms-control",
+      "type": "error",
+      "text": "Blocked autofocusing on a <input> element in a cross-origin subframe."
+    }
+  ],
+  "failedRequests": [],
+  "limitations": [
+    "Chromium software WebGL and emulated touch; no physical phone or WebKit/Firefox run.",
+    "Normal animation clock; no game-state mutation. Submit observer only counts events.",
+    "Baseline pass means the reported failure reproduced and diagnostic controls succeeded."
+  ]
+}

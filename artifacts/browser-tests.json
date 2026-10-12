@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-12T13:15:10.730Z",
+  "date": "2026-10-12T13:49:59.233Z",
   "command": "node scripts/browser-check.mjs",
   "browser": "155.0.8059.12",
   "results": [
@@ -141,7 +141,7 @@
       "name": "Natural three-life game over and one-click replay",
       "passed": true,
       "endingScore": 500,
-      "endingTime": 8.133333333333512,
+      "endingTime": 8.10000000000018,
       "quality": "low"
     },
     {
@@ -155,8 +155,8 @@
     {
       "name": "Mobile automatic Low quality, real simultaneous touch movement/jump and pointer cancellation",
       "passed": true,
-      "jumpY": 2.5912500000000023,
-      "x": 4.340416666666666
+      "jumpY": 1.9975000000000014,
+      "x": 3.6041666666666665
     },
     {
       "name": "Landscape touch controls remain within the viewport",
