@@ -1,0 +1,66 @@
+{
+  "command": "npm test",
+  "date": "2026-10-12T11:59:21.025Z",
+  "results": [
+    {
+      "name": "Seed normalization and deterministic geometry, enemies and rewards",
+      "passed": true
+    },
+    {
+      "name": "8,000 generated levels: bounded gaps, safe starts, bosses and valid bonus pipes",
+      "passed": true
+    },
+    {
+      "name": "Variable jump height and stable 120 Hz movement",
+      "passed": true
+    },
+    {
+      "name": "Late jump grace and early jump buffering",
+      "passed": true
+    },
+    {
+      "name": "Headbutts break brick and release mystery power exactly once",
+      "passed": true
+    },
+    {
+      "name": "Mushroom Tea absorbs a hit; Star prevents hits and expires",
+      "passed": true
+    },
+    {
+      "name": "A released mystery power-up is reachable with an ordinary held jump",
+      "passed": true
+    },
+    {
+      "name": "Fire Fly shoots bouncing fireballs with a cooldown",
+      "passed": true
+    },
+    {
+      "name": "Beetles can be stomped; snail spikes cost a life",
+      "passed": true
+    },
+    {
+      "name": "Pause freezes simulation; resume and restart reset correctly",
+      "passed": true
+    },
+    {
+      "name": "Bonus cave preserves level progress, score and exit position",
+      "passed": true
+    },
+    {
+      "name": "Checkpoint respawn and three deaths lead to game over",
+      "passed": true
+    },
+    {
+      "name": "All four bosses telegraph, attack, rest and can be defeated; eight-level victory",
+      "passed": true
+    },
+    {
+      "name": "A failed boss fight respawns at its arena and resets the attack",
+      "passed": true
+    },
+    {
+      "name": "Manifest and export use a local, complete arcade contract",
+      "passed": true
+    }
+  ]
+}

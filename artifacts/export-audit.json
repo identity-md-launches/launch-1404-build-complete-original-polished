@@ -1,0 +1,514 @@
+{
+  "date": "2026-10-12T12:08:48.575Z",
+  "command": "node scripts/audit.mjs",
+  "passed": true,
+  "basis": "Uncompressed bytes of all deliverable files, including this report. Repository metadata, private inputs, dependency/cache directories and disposable test/scratch are excluded without reading their contents. No Git mutation was performed.",
+  "limitBytes": 8388608,
+  "totalBytes": 1758372,
+  "remainingBytes": 6630236,
+  "distBytes": 640429,
+  "ignoreFileBytes": 200,
+  "ignoreFileBudget": 512,
+  "relativeEntryAssets": [
+    "./favicon.svg",
+    "./assets/index-DhgOIO2m.js",
+    "./cover.svg"
+  ],
+  "manifest": {
+    "schemaVersion": "pepe-browser-game/1",
+    "title": "Pepe Bros",
+    "version": "1.0.0",
+    "summary": "A little frog. A legendary leap. Rescue the Golden Lily across eight seeded platforming levels.",
+    "description": "Guide Pepe through Moonlit Swamp, Crystal Caves, Sky Lily Pads and the Bog King's Castle. Collect golden flies, discover bonus caves and power-ups, stomp beetles and outsmart four bosses. Share a seed and chase your personal best. Original 3D diorama art and synthesized music, with strictly 2D platforming, three lives, instant replay and offline play after download.",
+    "controls": "Move: A/D or Left/Right. Jump: Space, W or Up; hold to jump higher. Run: Shift. Fire: J or X after Fire Fly. Pause: P or Esc. Enter a glowing pipe: S or Down. Mobile: left/right, Jump, Fire and a contextual Enter pipe button. Touch movement runs automatically.",
+    "genre": "action",
+    "players": 1,
+    "mobile": true,
+    "entry": "index.html",
+    "cover": "cover.svg"
+  },
+  "exportFiles": [
+    {
+      "path": "dist/assets/index-DhgOIO2m.js",
+      "bytes": 627027,
+      "sha256": "ebf1518ca85dfa3fa589125bdd50b5dc7c7ff00f26d4376ca511b4a76386d6bc"
+    },
+    {
+      "path": "dist/cover.svg",
+      "bytes": 5118,
+      "sha256": "0f229695755756aa10a0b1ef4b36ad66ca353ac1b77052957e15c98490aa2958"
+    },
+    {
+      "path": "dist/favicon.svg",
+      "bytes": 632,
+      "sha256": "8fa00b7889331003fcc6c80a30f879d520397a244beb4d3ea2ea4ebd04044805"
+    },
+    {
+      "path": "dist/fonts/OFL.txt",
+      "bytes": 4389,
+      "sha256": "c676351bf8576b9aba743cd5eaa8c0e7ee0d51f805d720447b4df4ddb6a2e416"
+    },
+    {
+      "path": "dist/index.html",
+      "bytes": 1208,
+      "sha256": "76e1a6f9a6f57b6cab436cbd384df0f7b62868c277734e271b6290b9802b2978"
+    },
+    {
+      "path": "dist/licenses/three-MIT.txt",
+      "bytes": 1081,
+      "sha256": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601"
+    },
+    {
+      "path": "dist/pepe-game.json",
+      "bytes": 974,
+      "sha256": "96e3efb297eedf97bed616988a065b3696de126cd0d45bc9ef25f39d22bb733f"
+    }
+  ],
+  "checkedLinks": [
+    {
+      "from": "README.md",
+      "to": "dist/index.html"
+    },
+    {
+      "from": "README.md",
+      "to": "scripts/tasks.mjs"
+    },
+    {
+      "from": "README.md",
+      "to": "artifacts/engine-tests.json"
+    },
+    {
+      "from": "README.md",
+      "to": "artifacts/browser-tests.json"
+    },
+    {
+      "from": "README.md",
+      "to": "artifacts/campaign-test.json"
+    },
+    {
+      "from": "README.md",
+      "to": "artifacts/validation.md"
+    },
+    {
+      "from": "README.md",
+      "to": "artifacts/build-checks.txt"
+    },
+    {
+      "from": "README.md",
+      "to": "artifacts/export-audit.json"
+    },
+    {
+      "from": "README.md",
+      "to": "DESIGN.md"
+    },
+    {
+      "from": "README.md",
+      "to": "public/pepe-game.json"
+    },
+    {
+      "from": "README.md",
+      "to": "src/bridge.ts"
+    },
+    {
+      "from": "README.md",
+      "to": "public/licenses/three-MIT.txt"
+    },
+    {
+      "from": "README.md",
+      "to": "public/fonts/OFL.txt"
+    },
+    {
+      "from": "README.md",
+      "to": "licenses/design-guidance.txt"
+    },
+    {
+      "from": "README.md",
+      "to": "BUDGET.md"
+    },
+    {
+      "from": "artifacts/validation.md",
+      "to": "licenses/design-guidance.txt"
+    },
+    {
+      "from": "artifacts/validation.md",
+      "to": "DESIGN.md"
+    },
+    {
+      "from": "artifacts/validation.md",
+      "to": "artifacts/pause-menu.jpg"
+    },
+    {
+      "from": "artifacts/validation.md",
+      "to": "artifacts/victory.jpg"
+    },
+    {
+      "from": "artifacts/validation.md",
+      "to": "artifacts/browser-tests.json"
+    },
+    {
+      "from": "artifacts/validation.md",
+      "to": "artifacts/mobile-title.jpg"
+    },
+    {
+      "from": "artifacts/validation.md",
+      "to": "artifacts/narrow-long-seed.jpg"
+    },
+    {
+      "from": "artifacts/validation.md",
+      "to": "artifacts/touch-landscape.jpg"
+    },
+    {
+      "from": "artifacts/validation.md",
+      "to": "artifacts/narrow-long-seed.jpg"
+    },
+    {
+      "from": "artifacts/validation.md",
+      "to": "artifacts/mobile-title.jpg"
+    },
+    {
+      "from": "artifacts/validation.md",
+      "to": "artifacts/mobile-game.jpg"
+    },
+    {
+      "from": "artifacts/validation.md",
+      "to": "artifacts/pause-menu.jpg"
+    },
+    {
+      "from": "artifacts/validation.md",
+      "to": "artifacts/world-3.jpg"
+    },
+    {
+      "from": "artifacts/validation.md",
+      "to": "artifacts/world-3.jpg"
+    },
+    {
+      "from": "artifacts/validation.md",
+      "to": "artifacts/world-4.jpg"
+    },
+    {
+      "from": "artifacts/validation.md",
+      "to": "artifacts/bog-king.jpg"
+    },
+    {
+      "from": "artifacts/validation.md",
+      "to": "BUDGET.md"
+    },
+    {
+      "from": "artifacts/validation.md",
+      "to": "artifacts/build-checks.txt"
+    },
+    {
+      "from": "artifacts/validation.md",
+      "to": "artifacts/build-checks.txt"
+    },
+    {
+      "from": "artifacts/validation.md",
+      "to": "artifacts/engine-tests.json"
+    },
+    {
+      "from": "artifacts/validation.md",
+      "to": "artifacts/browser-tests.json"
+    },
+    {
+      "from": "artifacts/validation.md",
+      "to": "artifacts/campaign-test.json"
+    },
+    {
+      "from": "artifacts/validation.md",
+      "to": "artifacts/export-audit.json"
+    },
+    {
+      "from": "artifacts/validation.md",
+      "to": "artifacts/desktop-title.jpg"
+    },
+    {
+      "from": "artifacts/validation.md",
+      "to": "artifacts/mobile-title.jpg"
+    },
+    {
+      "from": "artifacts/validation.md",
+      "to": "artifacts/mobile-game.jpg"
+    },
+    {
+      "from": "artifacts/validation.md",
+      "to": "artifacts/narrow-long-seed.jpg"
+    },
+    {
+      "from": "artifacts/validation.md",
+      "to": "artifacts/touch-landscape.jpg"
+    },
+    {
+      "from": "artifacts/validation.md",
+      "to": "artifacts/pause-menu.jpg"
+    },
+    {
+      "from": "artifacts/validation.md",
+      "to": "artifacts/game-over.jpg"
+    },
+    {
+      "from": "artifacts/validation.md",
+      "to": "artifacts/sandbox-game-over.jpg"
+    },
+    {
+      "from": "artifacts/validation.md",
+      "to": "artifacts/victory.jpg"
+    },
+    {
+      "from": "artifacts/validation.md",
+      "to": "artifacts/world-1.jpg"
+    },
+    {
+      "from": "artifacts/validation.md",
+      "to": "artifacts/world-2.jpg"
+    },
+    {
+      "from": "artifacts/validation.md",
+      "to": "artifacts/world-3.jpg"
+    },
+    {
+      "from": "artifacts/validation.md",
+      "to": "artifacts/world-4.jpg"
+    },
+    {
+      "from": "artifacts/validation.md",
+      "to": "artifacts/bog-king.jpg"
+    },
+    {
+      "from": "artifacts/validation.md",
+      "to": "README.md"
+    }
+  ],
+  "verification": {
+    "engineChecks": 15,
+    "browserChecks": 18,
+    "campaign": "won",
+    "seed": "POND-12",
+    "score": 67974
+  },
+  "inventory": [
+    {
+      "path": ".gitignore",
+      "bytes": 200
+    },
+    {
+      "path": "artifacts/bog-king.jpg",
+      "bytes": 62164
+    },
+    {
+      "path": "artifacts/browser-tests.json",
+      "bytes": 5107
+    },
+    {
+      "path": "artifacts/build-checks.txt",
+      "bytes": 2216
+    },
+    {
+      "path": "artifacts/campaign-test.json",
+      "bytes": 3307
+    },
+    {
+      "path": "artifacts/desktop-title.jpg",
+      "bytes": 101250
+    },
+    {
+      "path": "artifacts/engine-tests.json",
+      "bytes": 1753
+    },
+    {
+      "path": "artifacts/game-over.jpg",
+      "bytes": 39708
+    },
+    {
+      "path": "artifacts/mobile-game.jpg",
+      "bytes": 35556
+    },
+    {
+      "path": "artifacts/mobile-title.jpg",
+      "bytes": 48626
+    },
+    {
+      "path": "artifacts/narrow-long-seed.jpg",
+      "bytes": 43207
+    },
+    {
+      "path": "artifacts/pause-menu.jpg",
+      "bytes": 38707
+    },
+    {
+      "path": "artifacts/sandbox-game-over.jpg",
+      "bytes": 75599
+    },
+    {
+      "path": "artifacts/touch-landscape.jpg",
+      "bytes": 38344
+    },
+    {
+      "path": "artifacts/validation.md",
+      "bytes": 12828
+    },
+    {
+      "path": "artifacts/victory.jpg",
+      "bytes": 38082
+    },
+    {
+      "path": "artifacts/world-1.jpg",
+      "bytes": 66163
+    },
+    {
+      "path": "artifacts/world-2.jpg",
+      "bytes": 64649
+    },
+    {
+      "path": "artifacts/world-3.jpg",
+      "bytes": 66238
+    },
+    {
+      "path": "artifacts/world-4.jpg",
+      "bytes": 57910
+    },
+    {
+      "path": "BUDGET.md",
+      "bytes": 1184
+    },
+    {
+      "path": "DESIGN.md",
+      "bytes": 9591
+    },
+    {
+      "path": "dist/assets/index-DhgOIO2m.js",
+      "bytes": 627027
+    },
+    {
+      "path": "dist/cover.svg",
+      "bytes": 5118
+    },
+    {
+      "path": "dist/favicon.svg",
+      "bytes": 632
+    },
+    {
+      "path": "dist/fonts/OFL.txt",
+      "bytes": 4389
+    },
+    {
+      "path": "dist/index.html",
+      "bytes": 1208
+    },
+    {
+      "path": "dist/licenses/three-MIT.txt",
+      "bytes": 1081
+    },
+    {
+      "path": "dist/pepe-game.json",
+      "bytes": 974
+    },
+    {
+      "path": "index.html",
+      "bytes": 1203
+    },
+    {
+      "path": "licenses/design-guidance.txt",
+      "bytes": 11964
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 40620
+    },
+    {
+      "path": "package.json",
+      "bytes": 520
+    },
+    {
+      "path": "public/cover.svg",
+      "bytes": 5118
+    },
+    {
+      "path": "public/favicon.svg",
+      "bytes": 632
+    },
+    {
+      "path": "public/fonts/OFL.txt",
+      "bytes": 4389
+    },
+    {
+      "path": "public/licenses/three-MIT.txt",
+      "bytes": 1081
+    },
+    {
+      "path": "public/pepe-game.json",
+      "bytes": 974
+    },
+    {
+      "path": "README.md",
+      "bytes": 11411
+    },
+    {
+      "path": "scripts/audit.mjs",
+      "bytes": 6412
+    },
+    {
+      "path": "scripts/browser-check.mjs",
+      "bytes": 15827
+    },
+    {
+      "path": "scripts/campaign-check.mjs",
+      "bytes": 7373
+    },
+    {
+      "path": "scripts/play-controller.mjs",
+      "bytes": 4582
+    },
+    {
+      "path": "scripts/tasks.mjs",
+      "bytes": 2940
+    },
+    {
+      "path": "scripts/test.mjs",
+      "bytes": 9654
+    },
+    {
+      "path": "src/assets/outfit-latin.woff2",
+      "bytes": 32292
+    },
+    {
+      "path": "src/audio.ts",
+      "bytes": 4633
+    },
+    {
+      "path": "src/bridge.ts",
+      "bytes": 1112
+    },
+    {
+      "path": "src/engine.ts",
+      "bytes": 26671
+    },
+    {
+      "path": "src/env.d.ts",
+      "bytes": 24
+    },
+    {
+      "path": "src/icons.ts",
+      "bytes": 2377
+    },
+    {
+      "path": "src/main.ts",
+      "bytes": 28239
+    },
+    {
+      "path": "src/storage.ts",
+      "bytes": 859
+    },
+    {
+      "path": "src/style.css",
+      "bytes": 34090
+    },
+    {
+      "path": "src/view.ts",
+      "bytes": 38664
+    },
+    {
+      "path": "tsconfig.json",
+      "bytes": 332
+    }
+  ]
+}

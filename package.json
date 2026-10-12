@@ -1,0 +1,22 @@
+{
+  "name": "pepe-bros",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/tasks.mjs dev",
+    "build": "node scripts/tasks.mjs build",
+    "typecheck": "node scripts/tasks.mjs typecheck",
+    "preview": "node scripts/tasks.mjs preview",
+    "test": "node scripts/tasks.mjs test"
+  },
+  "dependencies": {
+    "three": "0.180.0"
+  },
+  "devDependencies": {
+    "@types/three": "0.180.0",
+    "typescript": "5.9.3",
+    "vite": "7.1.12",
+    "playwright": "1.56.1"
+  }
+}

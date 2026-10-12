@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+<defs><linearGradient id="sky" x2="0" y2="1"><stop stop-color="#183e3c"/><stop offset="1" stop-color="#4b7460"/></linearGradient><linearGradient id="skin" x2="0" y2="1"><stop stop-color="#b2d879"/><stop offset="1" stop-color="#75a34b"/></linearGradient><linearGradient id="pond" x2="0" y2="1"><stop stop-color="#366c60"/><stop offset="1" stop-color="#163a32"/></linearGradient><radialGradient id="sun"><stop stop-color="#ffe4a3"/><stop offset="1" stop-color="#edca87"/></radialGradient><filter id="shadow"><feDropShadow dy="8" stdDeviation="8" flood-color="#102d27" flood-opacity=".3"/></filter><g id="fly"><ellipse fill="#ffdc7c" rx="5" ry="8"/><ellipse fill="#f8efc9" cx="-6" cy="-5" rx="7" ry="3" transform="rotate(25)"/><ellipse fill="#f8efc9" cx="6" cy="-5" rx="7" ry="3" transform="rotate(-25)"/></g><g id="reed"><path d="M0 0q-24-110-18-140M0 0q25-76 17-110M0 0v-163" stroke="#719455" stroke-width="7" fill="none" stroke-linecap="round"/><path d="M0-159v-37" stroke="#bdab72" stroke-width="13" stroke-linecap="round"/></g></defs>
+<rect width="1200" height="630" fill="url(#sky)"/>
+<circle cx="945" cy="166" r="110" fill="url(#sun)"/>
+<path d="M290 453Q380 243 564 362Q671 192 807 358Q1055 233 1200 385V630H290Z" fill="#3b6652"/>
+<path d="M580 427Q695 332 791 425Q970 349 1086 431Q1151 372 1200 398V630H500Z" fill="#4e7356"/>
+<g fill="#284f41"><path d="M625 439q-13-68 3-148h17l16 148Z"/><ellipse cx="644" cy="262" rx="45" ry="101"/><ellipse cx="606" cy="309" rx="46" ry="65"/><path d="m1148 433-13-158h22l10 157Z"/><ellipse cx="1140" cy="230" rx="60" ry="109"/><ellipse cx="1190" cy="268" rx="55" ry="74"/></g>
+<path d="M0 451q258-22 499 0t701-7V630H0Z" fill="url(#pond)"/>
+<g stroke="#86ab85" stroke-width="2" fill="none" opacity=".24"><ellipse cx="887" cy="553" rx="258" ry="32"/><ellipse cx="856" cy="568" rx="220" ry="23"/><path d="M502 508h105m394-5h114m-607 56h79"/></g>
+<ellipse cx="881" cy="537" rx="203" ry="40" fill="#345f3c"/><ellipse cx="881" cy="525" rx="207" ry="37" fill="#739d57"/><path d="m881 525 83 32-12-37Z" fill="#386345"/><g stroke="#a8bd70" stroke-width="2" opacity=".55"><path d="m881 525-157-9m157 9-104 26m104-26 28-26m-28 26 114-19"/></g>
+<use href="#reed" x="1080" y="536"/><use href="#reed" x="699" y="551" transform="translate(140 165) scale(.75)"/>
+<g filter="url(#shadow)">
+<ellipse cx="875" cy="429" rx="72" ry="77" fill="#548f9a"/><ellipse cx="875" cy="452" rx="48" ry="38" fill="#80afb0"/>
+<g fill="#89b658"><ellipse cx="837" cy="492" rx="29" ry="32"/><ellipse cx="918" cy="491" rx="29" ry="32"/><ellipse cx="821" cy="519" rx="48" ry="16"/><ellipse cx="940" cy="520" rx="47" ry="16"/><ellipse cx="792" cy="439" rx="23" ry="42" transform="rotate(12 792 439)"/><ellipse cx="958" cy="432" rx="24" ry="40" transform="rotate(-23 958 432)"/></g>
+<ellipse cx="875" cy="344" rx="116" ry="72" fill="url(#skin)"/>
+<ellipse cx="827" cy="286" rx="52" ry="56" fill="url(#skin)"/><ellipse cx="924" cy="286" rx="52" ry="56" fill="url(#skin)"/>
+<g fill="#f4efd5"><ellipse cx="828" cy="289" rx="40" ry="42"/><ellipse cx="924" cy="289" rx="40" ry="42"/></g>
+<g fill="#30442d"><ellipse cx="840" cy="299" rx="12" ry="22"/><ellipse cx="936" cy="298" rx="12" ry="22"/></g><g fill="#f8f2d6"><ellipse cx="842" cy="288" rx="4" ry="6"/><ellipse cx="938" cy="287" rx="4" ry="6"/></g>
+<path d="M787 279q39-37 80 0v8h-80Zm97-1q39-35 80 0v9h-80Z" fill="#8fbd60"/>
+<ellipse cx="875" cy="356" rx="101" ry="44" fill="#88b457"/>
+<path d="M796 373q85 38 163-7" stroke="#9f6846" stroke-width="26" fill="none" stroke-linecap="round"/>
+<path d="M798 368q86 28 159-5" stroke="#57402d" stroke-width="6" fill="none" stroke-linecap="round"/>
+</g>
+<g transform="translate(1049 267) rotate(10)"><rect x="-32" y="-32" width="64" height="64" rx="7" fill="#b68d41"/><rect x="-28" y="-31" width="56" height="55" rx="5" fill="#edc875"/><text x="0" y="10" text-anchor="middle" font-family="Arial,sans-serif" font-size="44" font-weight="bold" fill="#82602f">?</text></g>
+<g><use href="#fly" x="723" y="263"/><use href="#fly" x="745" y="216"/><use href="#fly" x="784" y="183"/><use href="#fly" x="828" y="175"/><use href="#fly" x="1055" y="398"/><use href="#fly" x="661" y="400"/></g>
+<path d="M0 0h580q41 319-20 630H0Z" fill="#173930" opacity=".9"/>
+<g font-family="Arial,sans-serif"><text x="70" y="77" font-size="20" fill="#d5dfb5">A Lily Kingdom adventure</text><text x="61" y="232" font-size="142" font-weight="900" letter-spacing="-10" fill="#f6f1d7">Pepe</text><text x="63" y="353" font-size="142" font-weight="900" letter-spacing="-10" fill="#d6e99b">Bros<tspan fill="#f4ce7d">.</tspan></text><text x="72" y="408" font-size="27" fill="#f6f1d7">Small frog. Big adventure.</text><text x="72" y="450" font-size="18" fill="#c0ccad">Eight seeded levels. Four unforgettable worlds.</text><rect x="72" y="493" width="190" height="52" rx="11" fill="#d6e99b"/><text x="110" y="526" font-size="21" font-weight="bold" fill="#173632">Play Pepe Bros</text><text x="72" y="594" font-size="16" fill="#c0ccad">pepe2pepe arcade</text></g>
+</svg>

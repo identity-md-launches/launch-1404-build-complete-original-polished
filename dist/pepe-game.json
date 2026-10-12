@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "pepe-browser-game/1",
+  "title": "Pepe Bros",
+  "version": "1.0.0",
+  "summary": "A little frog. A legendary leap. Rescue the Golden Lily across eight seeded platforming levels.",
+  "description": "Guide Pepe through Moonlit Swamp, Crystal Caves, Sky Lily Pads and the Bog King's Castle. Collect golden flies, discover bonus caves and power-ups, stomp beetles and outsmart four bosses. Share a seed and chase your personal best. Original 3D diorama art and synthesized music, with strictly 2D platforming, three lives, instant replay and offline play after download.",
+  "controls": "Move: A/D or Left/Right. Jump: Space, W or Up; hold to jump higher. Run: Shift. Fire: J or X after Fire Fly. Pause: P or Esc. Enter a glowing pipe: S or Down. Mobile: left/right, Jump, Fire and a contextual Enter pipe button. Touch movement runs automatically.",
+  "genre": "action",
+  "players": 1,
+  "mobile": true,
+  "entry": "index.html",
+  "cover": "cover.svg"
+}

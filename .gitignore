@@ -1,0 +1,14 @@
+!/dist/
+!/dist/**
+!/artifacts/
+!/artifacts/**
+**/node_modules/
+**/.vite/
+**/.vite-cache/
+**/.cache/
+**/coverage/
+**/playwright-report/
+**/test-results/
+**/.playwright-mcp/
+test/scratch/
+*.tsbuildinfo
