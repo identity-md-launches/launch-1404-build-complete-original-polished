@@ -2,6 +2,34 @@
 
 Worker report, 12 October 2026. **Complete for the stated build-worker scope.** Hosting and the registration callback remain the post-publication agent’s responsibility. This is recorded worker evidence, not an independent certification.
 
+## Revision review
+
+This revision preserves the accepted engine, renderer, art and sound. It changes the four reproduced review findings in `src/main.ts` and `src/style.css`, adds a focused production-browser regression script, and rebuilds `dist/`. Review responses are in [`.imd-responses.json`](../.imd-responses.json). Inherited ignore behavior hid that required file from ordinary discovery; `.gitignore:5` explicitly includes it, within the existing 512-byte path budget in [BUDGET.md](../BUDGET.md). Original-export observations are preserved in [before.json](revision/before.json), with a bundle SHA-256; [after.json](revision/after.json) records the revised export. Baseline “passed” means the observation script completed, not that the original interface satisfied the regression assertions.
+
+| Finding | Reproduction, correction and evidence |
+| --- | --- |
+| High · landscape onboarding (`65349ce…`) | At 667×375, the original title stage was 640px tall and the document 744px tall. Gameplay had a 99px HUD; the intro, tutorial, status row and touch targets intersected. Intro/tutorial collision also reproduced at 844×390. [Original overlap](revision/before-intro-667.jpg). The compact media rules now apply to **landscape at or below 560px tall**, including 568px and 667px widths. They reset portrait wrapping, use one HUD row, hide the footer, fit the title, and place power/time between the touch groups. The tutorial is hidden while an introduction is visible; the rotation hint is portrait-only. A maximum-length seed initially exposed another instance of the same collision (HUD bottom 153px, tutorial top 124px); a 180px compact seed field reduces its HUD bottom to 119px. [568px title](revision/after-landscape-title-568.jpg), [intro](revision/after-intro-568.jpg), [tutorial](revision/after-tutorial-568.jpg), [long seed](revision/after-long-seed-568.jpg). |
+| Medium · host pause (`213df05…`) | In the original opaque iframe, Resume preserved pause but Restart changed mode to playing without a parent resume. `start()` now checks `hostPaused` before closing dialogs or resetting state and no longer clears it. The regression checks unchanged mode, elapsed time and seed after Restart; New run from the title is also blocked until a matching parent resume. Parent resume and subsequent local restart are rechecked. |
+| Medium · title copy (`d1ce30e…`) | Desktop and 390px screens showed the adventure chip above the wordmark and repeated adventure copy below it. The chip and its unused CSS were removed. The description now says “A seeded platformer through the Lily Kingdom.” [Desktop](revision/after-title-1440.jpg), [390px](revision/after-title-390.jpg). |
+| Medium · title weights (`485898b…`) | Computed visible text weights were 400, 500, 600, 650 and 850 at both title widths. The description now uses 400; branding and route names use 600, including the mobile override. The same measured first screens now use 400, 600 and 850. Existing gameplay/dialog typography is unchanged. |
+
+The revision applies the pinned Better Interface workflow to the changed surfaces and considers all six domains:
+
+| Domain | Revision coverage |
+| --- | --- |
+| Accessibility — Checked | New run remains on screen at 390px and short landscape sizes. Native controls and accessible labels are preserved; touch targets remain reachable and the existing keyboard/focus/reduced-motion checks are rerun. Screen-reader and physical-device checks remain unperformed. |
+| Layout — Checked | Production DOM bounds and rendered screenshots at 568×320, 667×375, 844×390, 740×560, 390×844 and 1440×900. Intro/tutorial sequencing, status/control intersections, overflow, portrait-only hint and 24-character seed checked. Native zoom and RTL remain unverified. |
+| Writing — Checked | Title now identifies the seeded platformer directly; New run and Enter seed labels remain. Host pause uses the existing player-resume notice. No comprehension study. |
+| Typography — Checked | Actual visible text weights measured at desktop/mobile widths; title wrapping and primary-action position inspected. Same local font and six size roles retained. |
+| Colors — Checked | Existing semantic colors preserved; the standard browser check remeasures the existing solid pairs. No new palette or claim about every animated background. |
+| UI — Checked | Intro then tutorial, pause/restart state, title actions and pointer reachability checked. Existing game-over/replay and audio gesture tests rerun. No animation-panel slow-motion review. |
+
+The baseline used Chromium 141.0.7390.37. The final checks select installed Chromium 155.0.8059.12 through `PLAYWRIGHT_EXECUTABLE_PATH`; both use software WebGL. Early normal-clock runs hit movement/game-over observation timeouts under software rendering; the first failure is retained in [its JSON](revision/initial-browser-timeout.json) and [screenshot](revision/initial-browser-timeout.jpg). A [later sandbox timeout snapshot](revision/sandbox-timeout.json) showed the right input still held, two lives lost and only 5.3 simulated seconds elapsed after 90 wall seconds. Long game-over observations now select Low through the actual pause-menu control and allow 90 seconds standalone / 240 seconds sandboxed. The sandbox viewport is 844×600. Physics, clocks and movement inputs are unmodified in this suite. Only completed final runs below are reported as passes.
+
+Final corrective locations: `src/style.css:1623` (compact landscape frame/HUD/overlays), `src/style.css:1846` (tutorial position), `src/style.css:1852` (intro sequencing and portrait hint), `src/style.css:1880` (seed field/time), `src/main.ts:147` (host-pause guard), `src/main.ts:32` (title copy), and `src/style.css:128`, `:237`, `:352`, `:1399` (title weights).
+
+**Additional limitation outside the requested fixes:** Chromium blocks native Enter seed form submission inside `sandbox="allow-scripts allow-pointer-lock"` because `allow-forms` is absent. The normal site’s seed form works. An extra probe opened Enter seed, filled `PAUSED-SEED`, clicked Start this seed before and after a parent resume, and logged the browser’s blocked-submission message and unchanged title mode ([actual probe output](revision/sandbox-seed-probe.txt)). The original form implementation remains unchanged in this revision; sandbox validation covers random starts, same-seed restart and the bridge, not successful custom-seed submission. This limitation supersedes any broader reading of the original build’s completion statement.
+
 ## Scope and decisions
 
 The inspected product is the complete static `dist/` export served under `/preview/`: title, help, seed entry/error, eight-stage gameplay, four bosses, pause/settings, stage clear, game over, victory and replay. Desktop keyboard and emulated touch are supported. English is the shipped language; one dark UI surrounds four world palettes. The game uses TypeScript and Three.js with native DOM controls; React would add no useful state boundary to this small canvas game.
@@ -23,7 +51,7 @@ Consequential choices: touch movement runs automatically; pipes use Down/S or a 
 
 ## Findings, corrections and rechecks
 
-Source locations identify the final corrective implementation. Earlier failing states are described rather than presented as passing evidence.
+The following is the retained initial-build review. Source line numbers here refer to that accepted revision; the revision review above and its final source locations take precedence for changed styles and onboarding. Earlier failing states are described rather than presented as passing evidence.
 
 | Severity / domain | Observed issue and impact | Correction / final evidence |
 | --- | --- | --- |
@@ -42,20 +70,21 @@ Source locations identify the final corrective implementation. Earlier failing s
 
 ## Actual verification
 
-The final source build used Node/npm with dependencies installed outside the repository (`PEPE_DEP_ROOT=/tmp/pepe-bros-toolchain`). Browser checks selected the installed Chromium executable with `PLAYWRIGHT_EXECUTABLE_PATH`. Equivalent normal-install commands are documented in the README.
+The revision build used Node/npm with dependencies installed outside the repository (`PEPE_DEP_ROOT=/tmp/pepe-revision-toolchain`). Browser checks selected `/opt/ms-playwright/chromium-1247/chrome-linux64/chrome` with `PLAYWRIGHT_EXECUTABLE_PATH`. Equivalent normal-install commands are documented in the README.
 
 | Command | Actual result / evidence |
 | --- | --- |
 | `npm run typecheck` | Passed, no TypeScript diagnostics. [Captured output](build-checks.txt). |
 | `npm run build` | Passed, Vite 7.1.12. Single locally bundled Three.js/game script and complete static export. [Captured output](build-checks.txt). |
 | `npm test` | **15 checks passed**, including 8,000 generated layouts, jump timing, powers, enemies, pause, bonus persistence, lives and all bosses/progression. [JSON](engine-tests.json). Targeted model tests sometimes position entities directly to isolate a rule; they are not a substitute for browser play. |
-| `node scripts/browser-check.mjs` | **18 checks passed** in Chromium 154.0.8037.0 with a normal animation clock: responsive layout, seed entry, keyboard/touch, gesture audio, focus, mute, quality, natural game-over and replay, reduced motion, sandbox bridge. No JavaScript errors or failed resource requests. [JSON](browser-tests.json). |
+| `node scripts/revision-check.mjs` | **11 regression groups passed** in Chromium 155.0.8059.12. Title copy/weights, landscape/portrait onboarding, maximum seed, host pause across restart/title, accepted parent resume and subsequent local restart. [JSON](revision/after.json), with bundle hash, measured bounds and no script errors or failed requests. |
+| `node scripts/browser-check.mjs` | **18 checks passed** in Chromium 155.0.8059.12 with a normal animation clock: responsive layout, standalone seed entry, keyboard/touch, gesture audio, focus, mute, quality, natural game-over and replay, reduced motion, sandbox bridge. Long game-over checks use Low quality through the settings UI. No JavaScript errors or failed resource requests. [JSON](browser-tests.json). |
 | `node scripts/campaign-check.mjs` | **Passed all eight levels and victory replay**, seed `POND-12`, score **67,974**, one life remaining, 316.61 simulated gameplay seconds. [JSON](campaign-test.json). Real production browser with controlled 120 Hz animation clock, synthetic keyboard input and read-only diagnostics. Every simulation/UI/scene frame runs; software WebGL rasterizes every twelfth frame. No game-state mutation. This is not a hardware FPS or human pacing measurement. |
 | `node scripts/audit.mjs` | File sizes, relative entry references, manifest assets, original cover dimensions, metadata, required evidence links, public/export equivalence and export SHA-256 inventory are recorded in [export audit](export-audit.json). |
 
 The normal browser check exercises `sandbox="allow-scripts allow-pointer-lock"`, denied localStorage, channel handshake, rejection of wrong channel and wrong source, host pause/resume, one finite nonnegative integer score on game over, and subsequent replay. Audio is unstarted before a gesture, starts from a click, and mute survives a reload when storage is available. Touch uses Chromium’s real touch event dispatch with simultaneous movement/jump and cancellation.
 
-The worker also navigated and inspected the production page using the supplied browser tool. The final screenshots linked here were taken by the repeatable Playwright scripts and then visually opened for review. Software WebGL can emit GPU/readback performance warnings; no production JavaScript or asset failure was observed in the final checks.
+The initial build’s evidence included navigation using the supplied browser tool. This revision uses real Chromium through the repeatable Playwright scripts, then opens the saved screenshots for visual review. Software WebGL can emit GPU/readback performance warnings; the separate sandbox seed-form limitation is recorded above.
 
 ## Evidence gallery
 
@@ -65,6 +94,6 @@ The worker also navigated and inspected the production page using the supplied b
 
 ## Remaining limits and handoff
 
-No required build-worker check remains outstanding. Hardware 60 FPS, physical iOS/Android, Safari/Firefox, screen-reader gameplay, native 200% zoom and a human 8–12 minute pacing study remain unverified. The browser campaign is a fast input-driven route, not a claim that every possible generated layout has been completed by a person. Current tests are useful evidence, not a proof of universal playability or full accessibility conformance.
+All four revision findings are fixed and the listed checks are complete. The sandbox native seed-form limitation documented above remains outside this bounded revision. Hardware 60 FPS, physical iOS/Android, Safari/Firefox, screen-reader gameplay, native 200% zoom and a human 8–12 minute pacing study remain unverified. The browser campaign is a fast input-driven route, not a claim that every possible generated layout has been completed by a person. Current tests are useful evidence, not a proof of universal playability or full accessibility conformance.
 
 **Registration pending: post-publication agent required.** After hosting, the coordinating agent must run `npm run release -- --job JOB_UUID` in the template repository with the actual admitted job ID, preserve the private receipt, and report website, Explorer link, submission ID and actual review status. Use the same command/ID/capability for backoff retries of timeouts, 429 and 5xx. The complete instructions are in [README.md](../README.md#publish-and-finish-registration). No public credential, invented CID or registration callback is embedded in this export.

@@ -2,7 +2,7 @@
 
 ## Overview
 
-Pepe Bros is an arcade platformer presented as a small, sculpted storybook world. The title screen pairs large cream-and-lily typography with a modeled frog on a lily pad. Warm gold marks flies, rewards and sunlight. The four-stage route at the bottom introduces the adventure without competing with New run.
+Pepe Bros is an arcade platformer presented as a small, sculpted storybook world. The title screen pairs large cream-and-lily typography with a modeled frog on a lily pad. The wordmark leads directly into “A seeded platformer through the Lily Kingdom.” Warm gold marks flies, rewards and sunlight. The four-stage route at the bottom introduces the adventure without competing with New run.
 
 The interface is a quiet, dark frame around the world. Keep gameplay status compact and opaque so it remains readable against every environment. Menus use one primary action, ordinary labels and native controls. The model and scene construction are in `src/view.ts`; UI structure and behavior are in `src/main.ts`; the implemented CSS tokens and responsive patterns are in `src/style.css`.
 
@@ -28,7 +28,7 @@ World palettes live in `WORLDS` in `src/engine.ts`: swamp `#183e3c` / `#91ba5c`,
 
 ## Typography
 
-Outfit is served locally from `src/assets/outfit-latin.woff2`, with Arial and generic sans-serif fallbacks. Its variable range is declared as weights 100–900; the interface uses 400–850. Body text is 400, controls generally 600, and the title 850.
+Outfit is served locally from `src/assets/outfit-latin.woff2`, with Arial and generic sans-serif fallbacks. Its variable range is declared as weights 100–900; the interface uses 400–850. The title screen uses three weights: 400 for body/description, 600 for branding, route names and controls, and 850 for the wordmark. Existing gameplay and dialog typography retains its other emphasis roles.
 
 The six semantic size roles are `--text-xs` 12px, `--text-sm` 14px, `--text-base` 16px, `--text-lg` 20px, `--text-heading` 32px and `--text-display` `clamp(4.5rem, 8.4vw, 8rem)`. The display title uses responsive overrides, including `clamp(3.1rem, 14vw, 4.5rem)` at narrow widths. Inputs stay at 16px.
 
@@ -40,9 +40,11 @@ Desktop uses a 28px page inset, an 82px top bar, a rounded viewport stage and a 
 
 The desktop route uses four columns. At 1050px the frame and title insets tighten and the header tagline disappears. At 680px the page inset is 12px, the top bar is 66px, title padding is 25px, route captions simplify, and the HUD uses two rows. The seed field has a stable width and cannot collapse to one character per line. A separate time pill keeps the clock visible in portrait. At 360px, controls tighten without dropping below usable touch sizes.
 
-Touch controls appear for coarse pointers or widths up to 860px. They float above safe-area insets. Jump is 72px, movement buttons 58px and Fire 55px; the narrowest layout uses 65px, 48px and 48px respectively. Pointer capture supports simultaneous movement and jumping. Portrait presents a nonblocking landscape hint. Short landscape viewports under 560px tall reduce the header and hide the footer and title route to preserve play space.
+Touch controls appear for coarse pointers or widths up to 860px. They float above safe-area insets. Jump is 72px, movement buttons 58px and Fire 55px; the narrowest layout uses 65px, 48px and 48px respectively. Pointer capture supports simultaneous movement and jumping. The rotation hint appears only in portrait, after introductory messages have cleared.
 
-Browser inspection covered 1440×900 and 1280×800 desktop, 768×844 intermediate, 390×844 and 320×844 narrow layouts, and 844×390 touch landscape. Native 200% zoom, RTL and translated copy were not tested; the game ships in English.
+Landscape viewports at or below 560px tall use a 48px header, a viewport-fitted stage with no minimum height, and no footer or title route, including widths below 680px. The HUD becomes one row, preserving score, lives, flies, world and seed; power and time sit between the bottom control groups. Its 180px seed field wraps long seeds without covering onboarding. Level introductions begin 74px below the stage top; the tutorial begins at 76px and is hidden whenever the introduction is visible. These rules override the competing portrait layout.
+
+Browser inspection covered 1440×900 and 1280×800 desktop, 768×844 intermediate, 390×844 and 320×844 narrow layouts, and 568×320, 667×375, 844×390 and 740×560 touch landscape. Revision measurements and screenshots are in `artifacts/revision/`. Native 200% zoom, RTL and translated copy were not tested; the game ships in English.
 
 ## Elevation & Depth
 

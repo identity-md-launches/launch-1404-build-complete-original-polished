@@ -30,9 +30,8 @@ app.innerHTML = `
       <div class="scene-vignette" aria-hidden="true"></div>
       <section class="title-screen" id="title-screen" aria-labelledby="game-title">
         <div class="title-copy">
-          <div class="adventure-chip">${icon("seed")} A Lily Kingdom adventure</div>
           <h1 id="game-title">Pepe<span>Bros<span class="title-dot">.</span></span></h1>
-          <p class="title-description">Small frog. Big adventure.</p>
+          <p class="title-description">A seeded platformer through the Lily Kingdom.</p>
           <p class="title-story">The Golden Lily is gone. The Bog King looks smug.<br class="desktop-break"> Time to give him a run for it.</p>
           <div class="start-actions"><button class="primary" id="new-run">${icon("play")} New run ${icon("arrow")}</button><button class="secondary" id="enter-seed">${icon("seed")} Enter seed</button></div>
           <p class="run-note">Random seed · 8 levels · 3 lives</p>
@@ -146,10 +145,13 @@ function randomSeed() {
   return `LILY-${values[0].toString(36).slice(0, 5).toUpperCase()}`;
 }
 function start(seed: string) {
+  if (hostPaused) {
+    toast("The arcade has paused this run. Resume from the player.");
+    return;
+  }
   if (!view) return;
   closeDialog();
   clearInput();
-  hostPaused = false;
   finishedReported = false;
   tutorialDismissed = false;
   game.start(seed);

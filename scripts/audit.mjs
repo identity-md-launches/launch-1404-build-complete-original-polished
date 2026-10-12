@@ -33,6 +33,7 @@ const required = [
   "package.json", "package-lock.json", "README.md", "DESIGN.md", "BUDGET.md",
   "artifacts/validation.md", "artifacts/engine-tests.json", "artifacts/browser-tests.json",
   "artifacts/campaign-test.json", "artifacts/build-checks.txt",
+  ".imd-responses.json", "artifacts/revision/before.json", "artifacts/revision/after.json",
 ];
 for (const path of required) assert.ok(files.some((f) => f.path === path), path);
 const html = await readFile("dist/index.html", "utf8");
@@ -58,6 +59,8 @@ assert.doesNotMatch(bundle, /__playtestClock|__controller|X-Game-Submission|pepe
 const engine = JSON.parse(await readFile("artifacts/engine-tests.json", "utf8"));
 const browser = JSON.parse(await readFile("artifacts/browser-tests.json", "utf8"));
 const campaign = JSON.parse(await readFile("artifacts/campaign-test.json", "utf8"));
+const revision = JSON.parse(await readFile("artifacts/revision/after.json", "utf8"));
+const responses = JSON.parse(await readFile(".imd-responses.json", "utf8")).responses;
 assert.ok(engine.results.every((r) => r.passed));
 assert.ok(browser.results.every((r) => r.passed));
 assert.deepEqual(browser.errors, []);
@@ -65,6 +68,13 @@ assert.deepEqual(browser.failedRequests, []);
 assert.equal(campaign.passed, true);
 assert.equal(campaign.outcome.mode, "won");
 assert.equal(campaign.outcome.level, 7);
+assert.equal(revision.passed, true);
+assert.deepEqual(revision.errors, []);
+assert.deepEqual(revision.failedRequests, []);
+assert.equal(revision.bundleSha256, createHash("sha256").update(bundle).digest("hex"));
+assert.equal(responses.length, 4);
+assert.equal(new Set(responses.map((r) => r.finding)).size, 4);
+assert.ok(responses.every((r) => /^[a-f0-9]{64}$/.test(r.finding) && r.verdict === "fixed" && r.detail.length > 0));
 assert.ok((await stat(".gitignore")).size <= 512);
 const checkedLinks = [];
 for (const path of ["README.md", "DESIGN.md", "artifacts/validation.md"]) {
@@ -90,7 +100,7 @@ const report = {
   distBytes: exportFiles.reduce((sum, f) => sum + f.bytes, 0),
   ignoreFileBytes: (await stat(".gitignore")).size, ignoreFileBudget: 512,
   relativeEntryAssets: assetUrls, manifest, exportFiles, checkedLinks,
-  verification: { engineChecks: engine.results.length, browserChecks: browser.results.length, campaign: campaign.outcome.mode, seed: campaign.seed, score: campaign.outcome.score },
+  verification: { engineChecks: engine.results.length, browserChecks: browser.results.length, revisionChecks: revision.results.length, reviewResponses: responses.length, campaign: campaign.outcome.mode, seed: campaign.seed, score: campaign.outcome.score },
   inventory: files.filter((f) => f.path !== reportPath),
 };
 // The self-inclusive byte total converges when its decimal digit count is stable.

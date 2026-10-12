@@ -236,11 +236,18 @@ try {
   assert.equal(d.lives, 3);
   assert.ok(d.player.x < 3.1);
   result("Resume, Esc pause, quality, mute and same-seed restart");
+  // Software WebGL may take seconds per High-quality frame. Use the real
+  // quality control for the long, normal-clock game-over observation.
+  if (d.quality === "high") {
+    await page.locator("#pause").click();
+    await page.locator("#quality").click();
+    await page.locator("#resume").click();
+  }
   await page.keyboard.down("ArrowRight");
   await page.waitForFunction(
     () => window.pepeDiagnostics.mode === "gameover",
     {},
-    { timeout: 35000 },
+    { timeout: 90000 },
   );
   await page.keyboard.up("ArrowRight");
   d = await diag(page);
@@ -255,6 +262,7 @@ try {
   result("Natural three-life game over and one-click replay", {
     endingScore: ending.score,
     endingTime: ending.elapsed,
+    quality: ending.quality,
   });
   await page.reload();
   await page.waitForFunction(() => !!window.pepeDiagnostics);
@@ -320,6 +328,7 @@ try {
   assert.ok(touchBounds.y + touchBounds.height <= 390);
   result("Landscape touch controls remain within the viewport");
   await touchContext.close();
+  await page.setViewportSize({ width: 844, height: 600 });
   await page.goto(base + "/harness");
   const frame = page.frames().find((f) => f.url().includes("/preview/"));
   assert.ok(frame);
@@ -362,15 +371,20 @@ try {
   assert.equal((await diag(frame)).elapsed, at.elapsed);
   await page.evaluate(() => send("resume"));
   await frame.waitForFunction(() => window.pepeDiagnostics.mode === "playing");
+  await frame.locator("#pause").click();
+  if ((await diag(frame)).quality === "high")
+    await frame.locator("#quality").click();
+  await frame.locator("#resume").click();
   result(
     "Opaque-origin sandbox: denied storage, channel handshake, source/channel rejection and host pause/resume",
+    { gameOverCheckQuality: (await diag(frame)).quality },
   );
   await frame.locator("#game").focus();
   await page.keyboard.down("ArrowRight");
   await frame.waitForFunction(
     () => window.pepeDiagnostics.mode === "gameover",
     {},
-    { timeout: 40000 },
+    { timeout: 240000 },
   );
   await page.keyboard.up("ArrowRight");
   await page.waitForFunction(() =>
@@ -401,6 +415,7 @@ try {
     name: "Browser check failure",
     passed: false,
     error: String(error),
+    diagnostics: await Promise.all(page.frames().map((frame) => diag(frame).catch(() => null))),
   });
   await shot("browser-failure").catch(() => {});
   process.exitCode = 1;

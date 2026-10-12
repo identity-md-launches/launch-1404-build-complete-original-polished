@@ -1,17 +1,17 @@
 {
-  "date": "2026-10-12T12:08:48.575Z",
+  "date": "2026-10-12T13:27:45.862Z",
   "command": "node scripts/audit.mjs",
   "passed": true,
   "basis": "Uncompressed bytes of all deliverable files, including this report. Repository metadata, private inputs, dependency/cache directories and disposable test/scratch are excluded without reading their contents. No Git mutation was performed.",
   "limitBytes": 8388608,
-  "totalBytes": 1758372,
-  "remainingBytes": 6630236,
-  "distBytes": 640429,
-  "ignoreFileBytes": 200,
+  "totalBytes": 3305252,
+  "remainingBytes": 5083356,
+  "distBytes": 640918,
+  "ignoreFileBytes": 222,
   "ignoreFileBudget": 512,
   "relativeEntryAssets": [
     "./favicon.svg",
-    "./assets/index-DhgOIO2m.js",
+    "./assets/index-BOG-vwrH.js",
     "./cover.svg"
   ],
   "manifest": {
@@ -29,9 +29,9 @@
   },
   "exportFiles": [
     {
-      "path": "dist/assets/index-DhgOIO2m.js",
-      "bytes": 627027,
-      "sha256": "ebf1518ca85dfa3fa589125bdd50b5dc7c7ff00f26d4376ca511b4a76386d6bc"
+      "path": "dist/assets/index-BOG-vwrH.js",
+      "bytes": 627516,
+      "sha256": "41585b8852c015a44954c7139a1b8cca9be3b652d2990ec5f77be16cbfcca83f"
     },
     {
       "path": "dist/cover.svg",
@@ -51,7 +51,7 @@
     {
       "path": "dist/index.html",
       "bytes": 1208,
-      "sha256": "76e1a6f9a6f57b6cab436cbd384df0f7b62868c277734e271b6290b9802b2978"
+      "sha256": "14f7d0ce48e23296fd5dbaf1021afc79733f2a6bdd0f822fedaf29bc4aec4ee1"
     },
     {
       "path": "dist/licenses/three-MIT.txt",
@@ -80,6 +80,14 @@
     {
       "from": "README.md",
       "to": "artifacts/browser-tests.json"
+    },
+    {
+      "from": "README.md",
+      "to": "artifacts/revision/after.json"
+    },
+    {
+      "from": "README.md",
+      "to": "artifacts/revision/before.json"
     },
     {
       "from": "README.md",
@@ -124,6 +132,66 @@
     {
       "from": "README.md",
       "to": "BUDGET.md"
+    },
+    {
+      "from": "artifacts/validation.md",
+      "to": ".imd-responses.json"
+    },
+    {
+      "from": "artifacts/validation.md",
+      "to": "BUDGET.md"
+    },
+    {
+      "from": "artifacts/validation.md",
+      "to": "artifacts/revision/before.json"
+    },
+    {
+      "from": "artifacts/validation.md",
+      "to": "artifacts/revision/after.json"
+    },
+    {
+      "from": "artifacts/validation.md",
+      "to": "artifacts/revision/before-intro-667.jpg"
+    },
+    {
+      "from": "artifacts/validation.md",
+      "to": "artifacts/revision/after-landscape-title-568.jpg"
+    },
+    {
+      "from": "artifacts/validation.md",
+      "to": "artifacts/revision/after-intro-568.jpg"
+    },
+    {
+      "from": "artifacts/validation.md",
+      "to": "artifacts/revision/after-tutorial-568.jpg"
+    },
+    {
+      "from": "artifacts/validation.md",
+      "to": "artifacts/revision/after-long-seed-568.jpg"
+    },
+    {
+      "from": "artifacts/validation.md",
+      "to": "artifacts/revision/after-title-1440.jpg"
+    },
+    {
+      "from": "artifacts/validation.md",
+      "to": "artifacts/revision/after-title-390.jpg"
+    },
+    {
+      "from": "artifacts/validation.md",
+      "to": "artifacts/revision/initial-browser-timeout.json"
+    },
+    {
+      "from": "artifacts/validation.md",
+      "to": "artifacts/revision/initial-browser-timeout.jpg"
+    },
+    {
+      "from": "artifacts/validation.md",
+      "to": "artifacts/revision/sandbox-timeout.json"
+    },
+    {
+      "from": "artifacts/validation.md",
+      "to": "artifacts/revision/sandbox-seed-probe.txt"
     },
     {
       "from": "artifacts/validation.md",
@@ -204,6 +272,10 @@
     {
       "from": "artifacts/validation.md",
       "to": "artifacts/engine-tests.json"
+    },
+    {
+      "from": "artifacts/validation.md",
+      "to": "artifacts/revision/after.json"
     },
     {
       "from": "artifacts/validation.md",
@@ -281,6 +353,8 @@
   "verification": {
     "engineChecks": 15,
     "browserChecks": 18,
+    "revisionChecks": 11,
+    "reviewResponses": 4,
     "campaign": "won",
     "seed": "POND-12",
     "score": 67974
@@ -288,19 +362,23 @@
   "inventory": [
     {
       "path": ".gitignore",
-      "bytes": 200
+      "bytes": 222
+    },
+    {
+      "path": ".imd-responses.json",
+      "bytes": 2738
     },
     {
       "path": "artifacts/bog-king.jpg",
-      "bytes": 62164
+      "bytes": 62135
     },
     {
       "path": "artifacts/browser-tests.json",
-      "bytes": 5107
+      "bytes": 5168
     },
     {
       "path": "artifacts/build-checks.txt",
-      "bytes": 2216
+      "bytes": 1441
     },
     {
       "path": "artifacts/campaign-test.json",
@@ -308,7 +386,7 @@
     },
     {
       "path": "artifacts/desktop-title.jpg",
-      "bytes": 101250
+      "bytes": 101948
     },
     {
       "path": "artifacts/engine-tests.json",
@@ -316,67 +394,231 @@
     },
     {
       "path": "artifacts/game-over.jpg",
-      "bytes": 39708
+      "bytes": 39672
     },
     {
       "path": "artifacts/mobile-game.jpg",
-      "bytes": 35556
+      "bytes": 35619
     },
     {
       "path": "artifacts/mobile-title.jpg",
-      "bytes": 48626
+      "bytes": 48348
     },
     {
       "path": "artifacts/narrow-long-seed.jpg",
-      "bytes": 43207
+      "bytes": 38992
     },
     {
       "path": "artifacts/pause-menu.jpg",
-      "bytes": 38707
+      "bytes": 38396
+    },
+    {
+      "path": "artifacts/revision/after-intro-390.jpg",
+      "bytes": 38159
+    },
+    {
+      "path": "artifacts/revision/after-intro-568.jpg",
+      "bytes": 27228
+    },
+    {
+      "path": "artifacts/revision/after-intro-667.jpg",
+      "bytes": 33345
+    },
+    {
+      "path": "artifacts/revision/after-intro-740.jpg",
+      "bytes": 45643
+    },
+    {
+      "path": "artifacts/revision/after-intro-844.jpg",
+      "bytes": 39306
+    },
+    {
+      "path": "artifacts/revision/after-landscape-title-390.jpg",
+      "bytes": 43447
+    },
+    {
+      "path": "artifacts/revision/after-landscape-title-568.jpg",
+      "bytes": 24753
+    },
+    {
+      "path": "artifacts/revision/after-landscape-title-667.jpg",
+      "bytes": 27918
+    },
+    {
+      "path": "artifacts/revision/after-landscape-title-740.jpg",
+      "bytes": 40689
+    },
+    {
+      "path": "artifacts/revision/after-landscape-title-844.jpg",
+      "bytes": 34825
+    },
+    {
+      "path": "artifacts/revision/after-long-seed-568.jpg",
+      "bytes": 30288
+    },
+    {
+      "path": "artifacts/revision/after-title-1440.jpg",
+      "bytes": 96509
+    },
+    {
+      "path": "artifacts/revision/after-title-390.jpg",
+      "bytes": 45902
+    },
+    {
+      "path": "artifacts/revision/after-tutorial-390.jpg",
+      "bytes": 37143
+    },
+    {
+      "path": "artifacts/revision/after-tutorial-568.jpg",
+      "bytes": 28115
+    },
+    {
+      "path": "artifacts/revision/after-tutorial-667.jpg",
+      "bytes": 33257
+    },
+    {
+      "path": "artifacts/revision/after-tutorial-740.jpg",
+      "bytes": 44961
+    },
+    {
+      "path": "artifacts/revision/after-tutorial-844.jpg",
+      "bytes": 39509
+    },
+    {
+      "path": "artifacts/revision/after.json",
+      "bytes": 31927
+    },
+    {
+      "path": "artifacts/revision/before-intro-390.jpg",
+      "bytes": 42849
+    },
+    {
+      "path": "artifacts/revision/before-intro-568.jpg",
+      "bytes": 29987
+    },
+    {
+      "path": "artifacts/revision/before-intro-667.jpg",
+      "bytes": 35356
+    },
+    {
+      "path": "artifacts/revision/before-intro-740.jpg",
+      "bytes": 49772
+    },
+    {
+      "path": "artifacts/revision/before-intro-844.jpg",
+      "bytes": 43508
+    },
+    {
+      "path": "artifacts/revision/before-landscape-title-390.jpg",
+      "bytes": 43615
+    },
+    {
+      "path": "artifacts/revision/before-landscape-title-568.jpg",
+      "bytes": 20208
+    },
+    {
+      "path": "artifacts/revision/before-landscape-title-667.jpg",
+      "bytes": 25452
+    },
+    {
+      "path": "artifacts/revision/before-landscape-title-740.jpg",
+      "bytes": 39478
+    },
+    {
+      "path": "artifacts/revision/before-landscape-title-844.jpg",
+      "bytes": 34038
+    },
+    {
+      "path": "artifacts/revision/before-title-1440.jpg",
+      "bytes": 95915
+    },
+    {
+      "path": "artifacts/revision/before-title-390.jpg",
+      "bytes": 46020
+    },
+    {
+      "path": "artifacts/revision/before-tutorial-390.jpg",
+      "bytes": 37274
+    },
+    {
+      "path": "artifacts/revision/before-tutorial-568.jpg",
+      "bytes": 20192
+    },
+    {
+      "path": "artifacts/revision/before-tutorial-667.jpg",
+      "bytes": 31501
+    },
+    {
+      "path": "artifacts/revision/before-tutorial-740.jpg",
+      "bytes": 43628
+    },
+    {
+      "path": "artifacts/revision/before-tutorial-844.jpg",
+      "bytes": 39616
+    },
+    {
+      "path": "artifacts/revision/before.json",
+      "bytes": 25988
+    },
+    {
+      "path": "artifacts/revision/initial-browser-timeout.jpg",
+      "bytes": 85389
+    },
+    {
+      "path": "artifacts/revision/initial-browser-timeout.json",
+      "bytes": 3403
+    },
+    {
+      "path": "artifacts/revision/sandbox-seed-probe.txt",
+      "bytes": 2439
+    },
+    {
+      "path": "artifacts/revision/sandbox-timeout.json",
+      "bytes": 11689
     },
     {
       "path": "artifacts/sandbox-game-over.jpg",
-      "bytes": 75599
+      "bytes": 42934
     },
     {
       "path": "artifacts/touch-landscape.jpg",
-      "bytes": 38344
+      "bytes": 39137
     },
     {
       "path": "artifacts/validation.md",
-      "bytes": 12828
+      "bytes": 20096
     },
     {
       "path": "artifacts/victory.jpg",
-      "bytes": 38082
+      "bytes": 38119
     },
     {
       "path": "artifacts/world-1.jpg",
-      "bytes": 66163
+      "bytes": 66208
     },
     {
       "path": "artifacts/world-2.jpg",
-      "bytes": 64649
+      "bytes": 64724
     },
     {
       "path": "artifacts/world-3.jpg",
-      "bytes": 66238
+      "bytes": 66175
     },
     {
       "path": "artifacts/world-4.jpg",
-      "bytes": 57910
+      "bytes": 57931
     },
     {
       "path": "BUDGET.md",
-      "bytes": 1184
+      "bytes": 1371
     },
     {
       "path": "DESIGN.md",
-      "bytes": 9591
+      "bytes": 10389
     },
     {
-      "path": "dist/assets/index-DhgOIO2m.js",
-      "bytes": 627027
+      "path": "dist/assets/index-BOG-vwrH.js",
+      "bytes": 627516
     },
     {
       "path": "dist/cover.svg",
@@ -440,15 +682,15 @@
     },
     {
       "path": "README.md",
-      "bytes": 11411
+      "bytes": 12419
     },
     {
       "path": "scripts/audit.mjs",
-      "bytes": 6412
+      "bytes": 7180
     },
     {
       "path": "scripts/browser-check.mjs",
-      "bytes": 15827
+      "bytes": 16554
     },
     {
       "path": "scripts/campaign-check.mjs",
@@ -457,6 +699,10 @@
     {
       "path": "scripts/play-controller.mjs",
       "bytes": 4582
+    },
+    {
+      "path": "scripts/revision-check.mjs",
+      "bytes": 12644
     },
     {
       "path": "scripts/tasks.mjs",
@@ -492,7 +738,7 @@
     },
     {
       "path": "src/main.ts",
-      "bytes": 28239
+      "bytes": 28257
     },
     {
       "path": "src/storage.ts",
@@ -500,7 +746,7 @@
     },
     {
       "path": "src/style.css",
-      "bytes": 34090
+      "bytes": 34748
     },
     {
       "path": "src/view.ts",

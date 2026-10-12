@@ -40,13 +40,14 @@ npm run preview
 
 Open the local URL printed by Vite. Serve the export over HTTP; direct `file:` loading is not part of the supported preview workflow. The export is a self-contained classic IIFE script; the local WOFF2 is inlined into its CSS. This also supports an opaque iframe on static hosts without CORS headers. The Vite configuration lives in [`scripts/tasks.mjs`](scripts/tasks.mjs), with `base: './'`. There are no server routes. Copy the **entire** `dist/` directory to static hosting; the publisher serves this export without rebuilding it.
 
-The worker used an external toolchain at `/tmp/pepe-bros-toolchain` to respect the repository’s dependency-directory restriction. `PEPE_DEP_ROOT` optionally points the scripts to such an installation. It is unnecessary after a normal local `npm ci`, and is never embedded into the export.
+The revision worker used an external toolchain at `/tmp/pepe-revision-toolchain` to respect the repository’s dependency-directory restriction. `PEPE_DEP_ROOT` optionally points the scripts to such an installation. It is unnecessary after a normal local `npm ci`, and is never embedded into the export.
 
 ## Reproduce the checks
 
 ```sh
 npx playwright install chromium
 node scripts/browser-check.mjs
+node scripts/revision-check.mjs
 node scripts/campaign-check.mjs
 node scripts/audit.mjs
 ```
@@ -55,6 +56,7 @@ The browser scripts own a temporary HTTP server and close it and Chromium when f
 
 - [`artifacts/engine-tests.json`](artifacts/engine-tests.json): deterministic generation, 8,000 level layouts, jump height/grace/buffering, collision outcomes, all power-ups, pause, bonus persistence, lives, boss respawns and eight-stage progression. These are targeted model tests; some deliberately place entities to isolate a rule.
 - [`artifacts/browser-tests.json`](artifacts/browser-tests.json): real Chromium keyboard and touch interactions, responsive layouts, seed validation, audio gestures, mute persistence, pause/restart, natural game-over/replay, reduced motion, native dialog focus, measured solid-surface contrast and the opaque-origin iframe bridge.
+- [`artifacts/revision/after.json`](artifacts/revision/after.json): regression measurements for short landscape onboarding at 568×320, 667×375, 844×390 and 740×560, portrait rotation hints, the longest seed, title copy/weights, and the arcade host’s pause across restart/title actions. [`Before measurements`](artifacts/revision/before.json) record the original export; `--baseline` captures observations without asserting the fixes. `PEPE_EXPORT_ROOT` can select a saved export for comparison.
 - [`artifacts/campaign-test.json`](artifacts/campaign-test.json): input-driven eight-stage production-browser playthrough. The harness controls the animation clock at 120 Hz and uses read-only diagnostics to choose keyboard input. It rasterizes every twelfth frame to make the software WebGL check practical; every physics, UI and scene update still executes. It never changes game state. This is separate from the normal-clock interaction check and is not an FPS or human playtime benchmark.
 - [`artifacts/validation.md`](artifacts/validation.md): consolidated Better Interface review, observed defects and corrections, evidence index and limits.
 - [`artifacts/build-checks.txt`](artifacts/build-checks.txt) and [`artifacts/export-audit.json`](artifacts/export-audit.json): actual build/typecheck/test output, complete delivery size, export hashes and local documentation-link checks.
@@ -81,6 +83,8 @@ The soundtrack and effects are original Web Audio synthesis. Audio initializes a
 3. Emit one finite, nonnegative integer `score` when a run ends in game over or victory.
 
 The bridge uses `postMessage(..., '*')` for opaque origins and sends no private data. The tested sandbox is `allow-scripts allow-pointer-lock`, without `allow-same-origin`. Storage failures are caught. No registration callback or credential exists in browser code.
+
+Restart and New run preserve an active host pause; they become available again after a valid parent resume. **Retained limitation:** the native Enter seed form is blocked by Chromium in the sandbox without `allow-forms`. Seed entry works on the standalone site; random runs and same-seed restart work in the sandbox. This extra probe is recorded in the revision validation; the native form was left unchanged to keep this revision within the reported findings.
 
 ## Publish and finish registration
 

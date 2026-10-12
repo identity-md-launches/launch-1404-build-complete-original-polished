@@ -1,0 +1,1507 @@
+{
+  "date": "2026-10-12T12:56:53.530Z",
+  "command": "node scripts/revision-check.mjs",
+  "browser": "155.0.8059.12",
+  "bundleSha256": "41585b8852c015a44954c7139a1b8cca9be3b652d2990ec5f77be16cbfcca83f",
+  "baseline": false,
+  "passed": true,
+  "results": [
+    {
+      "name": "title 1440x900",
+      "weights": [
+        "400",
+        "600",
+        "850"
+      ],
+      "chip": false,
+      "description": "A seeded platformer through the Lily Kingdom.",
+      "layout": {
+        "viewport": [
+          1440,
+          900
+        ],
+        "document": [
+          1440,
+          900
+        ],
+        "stage": {
+          "x": 28,
+          "y": 82,
+          "width": 1384,
+          "height": 776,
+          "top": 82,
+          "right": 1412,
+          "bottom": 858,
+          "left": 28
+        },
+        "action": {
+          "x": 80,
+          "y": 500.21875,
+          "width": 175.71875,
+          "height": 50,
+          "top": 500.21875,
+          "right": 255.71875,
+          "bottom": 550.21875,
+          "left": 80
+        },
+        "hud": null,
+        "status": null,
+        "tutorial": null,
+        "intro": null,
+        "rotate": null,
+        "jump": null,
+        "left": null,
+        "right": null,
+        "fire": null
+      }
+    },
+    {
+      "name": "title 390x844",
+      "weights": [
+        "400",
+        "600",
+        "850"
+      ],
+      "chip": false,
+      "description": "A seeded platformer through the Lily Kingdom.",
+      "layout": {
+        "viewport": [
+          390,
+          844
+        ],
+        "document": [
+          390,
+          844
+        ],
+        "stage": {
+          "x": 12,
+          "y": 66,
+          "width": 366,
+          "height": 740,
+          "top": 66,
+          "right": 378,
+          "bottom": 806,
+          "left": 12
+        },
+        "action": {
+          "x": 37,
+          "y": 313.8125,
+          "width": 107.25,
+          "height": 48,
+          "top": 313.8125,
+          "right": 144.25,
+          "bottom": 361.8125,
+          "left": 37
+        },
+        "hud": null,
+        "status": null,
+        "tutorial": null,
+        "intro": null,
+        "rotate": null,
+        "jump": null,
+        "left": null,
+        "right": null,
+        "fire": null
+      }
+    },
+    {
+      "name": "onboarding 667x375",
+      "startMethod": "touch",
+      "title": {
+        "viewport": [
+          667,
+          375
+        ],
+        "document": [
+          667,
+          375
+        ],
+        "stage": {
+          "x": 10,
+          "y": 48,
+          "width": 647,
+          "height": 317,
+          "top": 48,
+          "right": 657,
+          "bottom": 365,
+          "left": 10
+        },
+        "action": {
+          "x": 38,
+          "y": 196.15625,
+          "width": 107.25,
+          "height": 44,
+          "top": 196.15625,
+          "right": 145.25,
+          "bottom": 240.15625,
+          "left": 38
+        },
+        "hud": null,
+        "status": null,
+        "tutorial": null,
+        "intro": null,
+        "rotate": null,
+        "jump": null,
+        "left": null,
+        "right": null,
+        "fire": null
+      },
+      "intro": {
+        "viewport": [
+          667,
+          375
+        ],
+        "document": [
+          667,
+          375
+        ],
+        "stage": {
+          "x": 10,
+          "y": 48,
+          "width": 647,
+          "height": 317,
+          "top": 48,
+          "right": 657,
+          "bottom": 365,
+          "left": 10
+        },
+        "action": null,
+        "hud": {
+          "x": 22,
+          "y": 58,
+          "width": 623,
+          "height": 59,
+          "top": 58,
+          "right": 645,
+          "bottom": 117,
+          "left": 22
+        },
+        "status": {
+          "x": 247.4140625,
+          "y": 313.84375,
+          "width": 172.171875,
+          "height": 29.15625,
+          "top": 313.84375,
+          "right": 419.5859375,
+          "bottom": 343,
+          "left": 247.4140625
+        },
+        "tutorial": null,
+        "intro": {
+          "x": 30,
+          "y": 122,
+          "width": 607,
+          "height": 96.78125,
+          "top": 122,
+          "right": 637,
+          "bottom": 218.78125,
+          "left": 30
+        },
+        "rotate": null,
+        "jump": {
+          "x": 567,
+          "y": 279,
+          "width": 72,
+          "height": 72,
+          "top": 279,
+          "right": 639,
+          "bottom": 351,
+          "left": 567
+        },
+        "left": {
+          "x": 28,
+          "y": 286,
+          "width": 58,
+          "height": 58,
+          "top": 286,
+          "right": 86,
+          "bottom": 344,
+          "left": 28
+        },
+        "right": {
+          "x": 96,
+          "y": 286,
+          "width": 58,
+          "height": 58,
+          "top": 286,
+          "right": 154,
+          "bottom": 344,
+          "left": 96
+        },
+        "fire": {
+          "x": 502,
+          "y": 287.5,
+          "width": 55,
+          "height": 55,
+          "top": 287.5,
+          "right": 557,
+          "bottom": 342.5,
+          "left": 502
+        }
+      },
+      "tutorial": {
+        "viewport": [
+          667,
+          375
+        ],
+        "document": [
+          667,
+          375
+        ],
+        "stage": {
+          "x": 10,
+          "y": 48,
+          "width": 647,
+          "height": 317,
+          "top": 48,
+          "right": 657,
+          "bottom": 365,
+          "left": 10
+        },
+        "action": null,
+        "hud": {
+          "x": 22,
+          "y": 58,
+          "width": 623,
+          "height": 59,
+          "top": 58,
+          "right": 645,
+          "bottom": 117,
+          "left": 22
+        },
+        "status": {
+          "x": 247.4140625,
+          "y": 313.84375,
+          "width": 172.171875,
+          "height": 29.15625,
+          "top": 313.84375,
+          "right": 419.5859375,
+          "bottom": 343,
+          "left": 247.4140625
+        },
+        "tutorial": {
+          "x": 93.5,
+          "y": 124,
+          "width": 480,
+          "height": 54,
+          "top": 124,
+          "right": 573.5,
+          "bottom": 178,
+          "left": 93.5
+        },
+        "intro": null,
+        "rotate": null,
+        "jump": {
+          "x": 567,
+          "y": 279,
+          "width": 72,
+          "height": 72,
+          "top": 279,
+          "right": 639,
+          "bottom": 351,
+          "left": 567
+        },
+        "left": {
+          "x": 28,
+          "y": 286,
+          "width": 58,
+          "height": 58,
+          "top": 286,
+          "right": 86,
+          "bottom": 344,
+          "left": 28
+        },
+        "right": {
+          "x": 96,
+          "y": 286,
+          "width": 58,
+          "height": 58,
+          "top": 286,
+          "right": 154,
+          "bottom": 344,
+          "left": 96
+        },
+        "fire": {
+          "x": 502,
+          "y": 287.5,
+          "width": 55,
+          "height": 55,
+          "top": 287.5,
+          "right": 557,
+          "bottom": 342.5,
+          "left": 502
+        }
+      },
+      "dismissedRotate": null,
+      "introTutorialOverlap": false,
+      "statusTutorialOverlap": false,
+      "jumpTutorialOverlap": false
+    },
+    {
+      "name": "onboarding 568x320",
+      "startMethod": "touch",
+      "title": {
+        "viewport": [
+          568,
+          320
+        ],
+        "document": [
+          568,
+          320
+        ],
+        "stage": {
+          "x": 10,
+          "y": 48,
+          "width": 548,
+          "height": 262,
+          "top": 48,
+          "right": 558,
+          "bottom": 310,
+          "left": 10
+        },
+        "action": {
+          "x": 38,
+          "y": 196.15625,
+          "width": 107.25,
+          "height": 44,
+          "top": 196.15625,
+          "right": 145.25,
+          "bottom": 240.15625,
+          "left": 38
+        },
+        "hud": null,
+        "status": null,
+        "tutorial": null,
+        "intro": null,
+        "rotate": null,
+        "jump": null,
+        "left": null,
+        "right": null,
+        "fire": null
+      },
+      "intro": {
+        "viewport": [
+          568,
+          320
+        ],
+        "document": [
+          568,
+          320
+        ],
+        "stage": {
+          "x": 10,
+          "y": 48,
+          "width": 548,
+          "height": 262,
+          "top": 48,
+          "right": 558,
+          "bottom": 310,
+          "left": 10
+        },
+        "action": null,
+        "hud": {
+          "x": 22,
+          "y": 58,
+          "width": 524,
+          "height": 61,
+          "top": 58,
+          "right": 546,
+          "bottom": 119,
+          "left": 22
+        },
+        "status": {
+          "x": 197.9140625,
+          "y": 258.84375,
+          "width": 172.171875,
+          "height": 29.15625,
+          "top": 258.84375,
+          "right": 370.0859375,
+          "bottom": 288,
+          "left": 197.9140625
+        },
+        "tutorial": null,
+        "intro": {
+          "x": 30,
+          "y": 122,
+          "width": 508,
+          "height": 96.78125,
+          "top": 122,
+          "right": 538,
+          "bottom": 218.78125,
+          "left": 30
+        },
+        "rotate": null,
+        "jump": {
+          "x": 468,
+          "y": 224,
+          "width": 72,
+          "height": 72,
+          "top": 224,
+          "right": 540,
+          "bottom": 296,
+          "left": 468
+        },
+        "left": {
+          "x": 28,
+          "y": 231,
+          "width": 58,
+          "height": 58,
+          "top": 231,
+          "right": 86,
+          "bottom": 289,
+          "left": 28
+        },
+        "right": {
+          "x": 96,
+          "y": 231,
+          "width": 58,
+          "height": 58,
+          "top": 231,
+          "right": 154,
+          "bottom": 289,
+          "left": 96
+        },
+        "fire": {
+          "x": 403,
+          "y": 232.5,
+          "width": 55,
+          "height": 55,
+          "top": 232.5,
+          "right": 458,
+          "bottom": 287.5,
+          "left": 403
+        }
+      },
+      "tutorial": {
+        "viewport": [
+          568,
+          320
+        ],
+        "document": [
+          568,
+          320
+        ],
+        "stage": {
+          "x": 10,
+          "y": 48,
+          "width": 548,
+          "height": 262,
+          "top": 48,
+          "right": 558,
+          "bottom": 310,
+          "left": 10
+        },
+        "action": null,
+        "hud": {
+          "x": 22,
+          "y": 58,
+          "width": 524,
+          "height": 61,
+          "top": 58,
+          "right": 546,
+          "bottom": 119,
+          "left": 22
+        },
+        "status": {
+          "x": 197.9140625,
+          "y": 258.84375,
+          "width": 172.171875,
+          "height": 29.15625,
+          "top": 258.84375,
+          "right": 370.0859375,
+          "bottom": 288,
+          "left": 197.9140625
+        },
+        "tutorial": {
+          "x": 44,
+          "y": 124,
+          "width": 480,
+          "height": 54,
+          "top": 124,
+          "right": 524,
+          "bottom": 178,
+          "left": 44
+        },
+        "intro": null,
+        "rotate": null,
+        "jump": {
+          "x": 468,
+          "y": 224,
+          "width": 72,
+          "height": 72,
+          "top": 224,
+          "right": 540,
+          "bottom": 296,
+          "left": 468
+        },
+        "left": {
+          "x": 28,
+          "y": 231,
+          "width": 58,
+          "height": 58,
+          "top": 231,
+          "right": 86,
+          "bottom": 289,
+          "left": 28
+        },
+        "right": {
+          "x": 96,
+          "y": 231,
+          "width": 58,
+          "height": 58,
+          "top": 231,
+          "right": 154,
+          "bottom": 289,
+          "left": 96
+        },
+        "fire": {
+          "x": 403,
+          "y": 232.5,
+          "width": 55,
+          "height": 55,
+          "top": 232.5,
+          "right": 458,
+          "bottom": 287.5,
+          "left": 403
+        }
+      },
+      "dismissedRotate": null,
+      "introTutorialOverlap": false,
+      "statusTutorialOverlap": false,
+      "jumpTutorialOverlap": false
+    },
+    {
+      "name": "568px maximum-length seed clears onboarding",
+      "intro": {
+        "viewport": [
+          568,
+          320
+        ],
+        "document": [
+          568,
+          320
+        ],
+        "stage": {
+          "x": 10,
+          "y": 48,
+          "width": 548,
+          "height": 262,
+          "top": 48,
+          "right": 558,
+          "bottom": 310,
+          "left": 10
+        },
+        "action": null,
+        "hud": {
+          "x": 22,
+          "y": 58,
+          "width": 524,
+          "height": 61,
+          "top": 58,
+          "right": 546,
+          "bottom": 119,
+          "left": 22
+        },
+        "status": {
+          "x": 197.9140625,
+          "y": 258.84375,
+          "width": 172.171875,
+          "height": 29.15625,
+          "top": 258.84375,
+          "right": 370.0859375,
+          "bottom": 288,
+          "left": 197.9140625
+        },
+        "tutorial": null,
+        "intro": {
+          "x": 30,
+          "y": 122,
+          "width": 508,
+          "height": 96.78125,
+          "top": 122,
+          "right": 538,
+          "bottom": 218.78125,
+          "left": 30
+        },
+        "rotate": null,
+        "jump": {
+          "x": 468,
+          "y": 224,
+          "width": 72,
+          "height": 72,
+          "top": 224,
+          "right": 540,
+          "bottom": 296,
+          "left": 468
+        },
+        "left": {
+          "x": 28,
+          "y": 231,
+          "width": 58,
+          "height": 58,
+          "top": 231,
+          "right": 86,
+          "bottom": 289,
+          "left": 28
+        },
+        "right": {
+          "x": 96,
+          "y": 231,
+          "width": 58,
+          "height": 58,
+          "top": 231,
+          "right": 154,
+          "bottom": 289,
+          "left": 96
+        },
+        "fire": {
+          "x": 403,
+          "y": 232.5,
+          "width": 55,
+          "height": 55,
+          "top": 232.5,
+          "right": 458,
+          "bottom": 287.5,
+          "left": 403
+        }
+      },
+      "tutorial": {
+        "viewport": [
+          568,
+          320
+        ],
+        "document": [
+          568,
+          320
+        ],
+        "stage": {
+          "x": 10,
+          "y": 48,
+          "width": 548,
+          "height": 262,
+          "top": 48,
+          "right": 558,
+          "bottom": 310,
+          "left": 10
+        },
+        "action": null,
+        "hud": {
+          "x": 22,
+          "y": 58,
+          "width": 524,
+          "height": 61,
+          "top": 58,
+          "right": 546,
+          "bottom": 119,
+          "left": 22
+        },
+        "status": {
+          "x": 197.9140625,
+          "y": 258.84375,
+          "width": 172.171875,
+          "height": 29.15625,
+          "top": 258.84375,
+          "right": 370.0859375,
+          "bottom": 288,
+          "left": 197.9140625
+        },
+        "tutorial": {
+          "x": 44,
+          "y": 124,
+          "width": 480,
+          "height": 54,
+          "top": 124,
+          "right": 524,
+          "bottom": 178,
+          "left": 44
+        },
+        "intro": null,
+        "rotate": null,
+        "jump": {
+          "x": 468,
+          "y": 224,
+          "width": 72,
+          "height": 72,
+          "top": 224,
+          "right": 540,
+          "bottom": 296,
+          "left": 468
+        },
+        "left": {
+          "x": 28,
+          "y": 231,
+          "width": 58,
+          "height": 58,
+          "top": 231,
+          "right": 86,
+          "bottom": 289,
+          "left": 28
+        },
+        "right": {
+          "x": 96,
+          "y": 231,
+          "width": 58,
+          "height": 58,
+          "top": 231,
+          "right": 154,
+          "bottom": 289,
+          "left": 96
+        },
+        "fire": {
+          "x": 403,
+          "y": 232.5,
+          "width": 55,
+          "height": 55,
+          "top": 232.5,
+          "right": 458,
+          "bottom": 287.5,
+          "left": 403
+        }
+      }
+    },
+    {
+      "name": "onboarding 844x390",
+      "startMethod": "touch",
+      "title": {
+        "viewport": [
+          844,
+          390
+        ],
+        "document": [
+          844,
+          390
+        ],
+        "stage": {
+          "x": 10,
+          "y": 48,
+          "width": 824,
+          "height": 332,
+          "top": 48,
+          "right": 834,
+          "bottom": 380,
+          "left": 10
+        },
+        "action": {
+          "x": 38,
+          "y": 195.421875,
+          "width": 168.25,
+          "height": 44,
+          "top": 195.421875,
+          "right": 206.25,
+          "bottom": 239.421875,
+          "left": 38
+        },
+        "hud": null,
+        "status": null,
+        "tutorial": null,
+        "intro": null,
+        "rotate": null,
+        "jump": null,
+        "left": null,
+        "right": null,
+        "fire": null
+      },
+      "intro": {
+        "viewport": [
+          844,
+          390
+        ],
+        "document": [
+          844,
+          390
+        ],
+        "stage": {
+          "x": 10,
+          "y": 48,
+          "width": 824,
+          "height": 332,
+          "top": 48,
+          "right": 834,
+          "bottom": 380,
+          "left": 10
+        },
+        "action": null,
+        "hud": {
+          "x": 22,
+          "y": 58,
+          "width": 800,
+          "height": 55,
+          "top": 58,
+          "right": 822,
+          "bottom": 113,
+          "left": 22
+        },
+        "status": {
+          "x": 333.9140625,
+          "y": 328.84375,
+          "width": 176.171875,
+          "height": 29.15625,
+          "top": 328.84375,
+          "right": 510.0859375,
+          "bottom": 358,
+          "left": 333.9140625
+        },
+        "tutorial": null,
+        "intro": {
+          "x": 30,
+          "y": 122,
+          "width": 784,
+          "height": 96.78125,
+          "top": 122,
+          "right": 814,
+          "bottom": 218.78125,
+          "left": 30
+        },
+        "rotate": null,
+        "jump": {
+          "x": 744,
+          "y": 294,
+          "width": 72,
+          "height": 72,
+          "top": 294,
+          "right": 816,
+          "bottom": 366,
+          "left": 744
+        },
+        "left": {
+          "x": 28,
+          "y": 301,
+          "width": 58,
+          "height": 58,
+          "top": 301,
+          "right": 86,
+          "bottom": 359,
+          "left": 28
+        },
+        "right": {
+          "x": 96,
+          "y": 301,
+          "width": 58,
+          "height": 58,
+          "top": 301,
+          "right": 154,
+          "bottom": 359,
+          "left": 96
+        },
+        "fire": {
+          "x": 679,
+          "y": 302.5,
+          "width": 55,
+          "height": 55,
+          "top": 302.5,
+          "right": 734,
+          "bottom": 357.5,
+          "left": 679
+        }
+      },
+      "tutorial": {
+        "viewport": [
+          844,
+          390
+        ],
+        "document": [
+          844,
+          390
+        ],
+        "stage": {
+          "x": 10,
+          "y": 48,
+          "width": 824,
+          "height": 332,
+          "top": 48,
+          "right": 834,
+          "bottom": 380,
+          "left": 10
+        },
+        "action": null,
+        "hud": {
+          "x": 22,
+          "y": 58,
+          "width": 800,
+          "height": 55,
+          "top": 58,
+          "right": 822,
+          "bottom": 113,
+          "left": 22
+        },
+        "status": {
+          "x": 333.9140625,
+          "y": 328.84375,
+          "width": 176.171875,
+          "height": 29.15625,
+          "top": 328.84375,
+          "right": 510.0859375,
+          "bottom": 358,
+          "left": 333.9140625
+        },
+        "tutorial": {
+          "x": 182,
+          "y": 124,
+          "width": 480,
+          "height": 54,
+          "top": 124,
+          "right": 662,
+          "bottom": 178,
+          "left": 182
+        },
+        "intro": null,
+        "rotate": null,
+        "jump": {
+          "x": 744,
+          "y": 294,
+          "width": 72,
+          "height": 72,
+          "top": 294,
+          "right": 816,
+          "bottom": 366,
+          "left": 744
+        },
+        "left": {
+          "x": 28,
+          "y": 301,
+          "width": 58,
+          "height": 58,
+          "top": 301,
+          "right": 86,
+          "bottom": 359,
+          "left": 28
+        },
+        "right": {
+          "x": 96,
+          "y": 301,
+          "width": 58,
+          "height": 58,
+          "top": 301,
+          "right": 154,
+          "bottom": 359,
+          "left": 96
+        },
+        "fire": {
+          "x": 679,
+          "y": 302.5,
+          "width": 55,
+          "height": 55,
+          "top": 302.5,
+          "right": 734,
+          "bottom": 357.5,
+          "left": 679
+        }
+      },
+      "dismissedRotate": null,
+      "introTutorialOverlap": false,
+      "statusTutorialOverlap": false,
+      "jumpTutorialOverlap": false
+    },
+    {
+      "name": "onboarding 740x560",
+      "startMethod": "touch",
+      "title": {
+        "viewport": [
+          740,
+          560
+        ],
+        "document": [
+          740,
+          560
+        ],
+        "stage": {
+          "x": 10,
+          "y": 48,
+          "width": 720,
+          "height": 502,
+          "top": 48,
+          "right": 730,
+          "bottom": 550,
+          "left": 10
+        },
+        "action": {
+          "x": 38,
+          "y": 195.421875,
+          "width": 168.25,
+          "height": 44,
+          "top": 195.421875,
+          "right": 206.25,
+          "bottom": 239.421875,
+          "left": 38
+        },
+        "hud": null,
+        "status": null,
+        "tutorial": null,
+        "intro": null,
+        "rotate": null,
+        "jump": null,
+        "left": null,
+        "right": null,
+        "fire": null
+      },
+      "intro": {
+        "viewport": [
+          740,
+          560
+        ],
+        "document": [
+          740,
+          560
+        ],
+        "stage": {
+          "x": 10,
+          "y": 48,
+          "width": 720,
+          "height": 502,
+          "top": 48,
+          "right": 730,
+          "bottom": 550,
+          "left": 10
+        },
+        "action": null,
+        "hud": {
+          "x": 22,
+          "y": 58,
+          "width": 696,
+          "height": 55,
+          "top": 58,
+          "right": 718,
+          "bottom": 113,
+          "left": 22
+        },
+        "status": {
+          "x": 281.9140625,
+          "y": 498.84375,
+          "width": 176.171875,
+          "height": 29.15625,
+          "top": 498.84375,
+          "right": 458.0859375,
+          "bottom": 528,
+          "left": 281.9140625
+        },
+        "tutorial": null,
+        "intro": {
+          "x": 30,
+          "y": 122,
+          "width": 680,
+          "height": 96.78125,
+          "top": 122,
+          "right": 710,
+          "bottom": 218.78125,
+          "left": 30
+        },
+        "rotate": null,
+        "jump": {
+          "x": 640,
+          "y": 464,
+          "width": 72,
+          "height": 72,
+          "top": 464,
+          "right": 712,
+          "bottom": 536,
+          "left": 640
+        },
+        "left": {
+          "x": 28,
+          "y": 471,
+          "width": 58,
+          "height": 58,
+          "top": 471,
+          "right": 86,
+          "bottom": 529,
+          "left": 28
+        },
+        "right": {
+          "x": 96,
+          "y": 471,
+          "width": 58,
+          "height": 58,
+          "top": 471,
+          "right": 154,
+          "bottom": 529,
+          "left": 96
+        },
+        "fire": {
+          "x": 575,
+          "y": 472.5,
+          "width": 55,
+          "height": 55,
+          "top": 472.5,
+          "right": 630,
+          "bottom": 527.5,
+          "left": 575
+        }
+      },
+      "tutorial": {
+        "viewport": [
+          740,
+          560
+        ],
+        "document": [
+          740,
+          560
+        ],
+        "stage": {
+          "x": 10,
+          "y": 48,
+          "width": 720,
+          "height": 502,
+          "top": 48,
+          "right": 730,
+          "bottom": 550,
+          "left": 10
+        },
+        "action": null,
+        "hud": {
+          "x": 22,
+          "y": 58,
+          "width": 696,
+          "height": 55,
+          "top": 58,
+          "right": 718,
+          "bottom": 113,
+          "left": 22
+        },
+        "status": {
+          "x": 281.9140625,
+          "y": 498.84375,
+          "width": 176.171875,
+          "height": 29.15625,
+          "top": 498.84375,
+          "right": 458.0859375,
+          "bottom": 528,
+          "left": 281.9140625
+        },
+        "tutorial": {
+          "x": 130,
+          "y": 124,
+          "width": 480,
+          "height": 54,
+          "top": 124,
+          "right": 610,
+          "bottom": 178,
+          "left": 130
+        },
+        "intro": null,
+        "rotate": null,
+        "jump": {
+          "x": 640,
+          "y": 464,
+          "width": 72,
+          "height": 72,
+          "top": 464,
+          "right": 712,
+          "bottom": 536,
+          "left": 640
+        },
+        "left": {
+          "x": 28,
+          "y": 471,
+          "width": 58,
+          "height": 58,
+          "top": 471,
+          "right": 86,
+          "bottom": 529,
+          "left": 28
+        },
+        "right": {
+          "x": 96,
+          "y": 471,
+          "width": 58,
+          "height": 58,
+          "top": 471,
+          "right": 154,
+          "bottom": 529,
+          "left": 96
+        },
+        "fire": {
+          "x": 575,
+          "y": 472.5,
+          "width": 55,
+          "height": 55,
+          "top": 472.5,
+          "right": 630,
+          "bottom": 527.5,
+          "left": 575
+        }
+      },
+      "dismissedRotate": null,
+      "introTutorialOverlap": false,
+      "statusTutorialOverlap": false,
+      "jumpTutorialOverlap": false
+    },
+    {
+      "name": "onboarding 390x844",
+      "startMethod": "touch",
+      "title": {
+        "viewport": [
+          390,
+          844
+        ],
+        "document": [
+          390,
+          844
+        ],
+        "stage": {
+          "x": 12,
+          "y": 66,
+          "width": 366,
+          "height": 740,
+          "top": 66,
+          "right": 378,
+          "bottom": 806,
+          "left": 12
+        },
+        "action": {
+          "x": 37,
+          "y": 313.8125,
+          "width": 107.25,
+          "height": 48,
+          "top": 313.8125,
+          "right": 144.25,
+          "bottom": 361.8125,
+          "left": 37
+        },
+        "hud": null,
+        "status": null,
+        "tutorial": null,
+        "intro": null,
+        "rotate": null,
+        "jump": null,
+        "left": null,
+        "right": null,
+        "fire": null
+      },
+      "intro": {
+        "viewport": [
+          390,
+          844
+        ],
+        "document": [
+          390,
+          844
+        ],
+        "stage": {
+          "x": 12,
+          "y": 66,
+          "width": 366,
+          "height": 740,
+          "top": 66,
+          "right": 378,
+          "bottom": 806,
+          "left": 12
+        },
+        "action": null,
+        "hud": {
+          "x": 24,
+          "y": 78,
+          "width": 342,
+          "height": 99,
+          "top": 78,
+          "right": 366,
+          "bottom": 177,
+          "left": 24
+        },
+        "status": {
+          "x": 30,
+          "y": 656.84375,
+          "width": 323,
+          "height": 37.15625,
+          "top": 656.84375,
+          "right": 353,
+          "bottom": 694,
+          "left": 30
+        },
+        "tutorial": null,
+        "intro": {
+          "x": 32,
+          "y": 325,
+          "width": 326,
+          "height": 116.875,
+          "top": 325,
+          "right": 358,
+          "bottom": 441.875,
+          "left": 32
+        },
+        "rotate": null,
+        "jump": {
+          "x": 288,
+          "y": 716,
+          "width": 72,
+          "height": 72,
+          "top": 716,
+          "right": 360,
+          "bottom": 788,
+          "left": 288
+        },
+        "left": {
+          "x": 30,
+          "y": 723,
+          "width": 58,
+          "height": 58,
+          "top": 723,
+          "right": 88,
+          "bottom": 781,
+          "left": 30
+        },
+        "right": {
+          "x": 98,
+          "y": 723,
+          "width": 58,
+          "height": 58,
+          "top": 723,
+          "right": 156,
+          "bottom": 781,
+          "left": 98
+        },
+        "fire": {
+          "x": 223,
+          "y": 724.5,
+          "width": 55,
+          "height": 55,
+          "top": 724.5,
+          "right": 278,
+          "bottom": 779.5,
+          "left": 223
+        }
+      },
+      "tutorial": {
+        "viewport": [
+          390,
+          844
+        ],
+        "document": [
+          390,
+          844
+        ],
+        "stage": {
+          "x": 12,
+          "y": 66,
+          "width": 366,
+          "height": 740,
+          "top": 66,
+          "right": 378,
+          "bottom": 806,
+          "left": 12
+        },
+        "action": null,
+        "hud": {
+          "x": 24,
+          "y": 78,
+          "width": 342,
+          "height": 99,
+          "top": 78,
+          "right": 366,
+          "bottom": 177,
+          "left": 24
+        },
+        "status": {
+          "x": 30,
+          "y": 656.84375,
+          "width": 323,
+          "height": 37.15625,
+          "top": 656.84375,
+          "right": 353,
+          "bottom": 694,
+          "left": 30
+        },
+        "tutorial": {
+          "x": 28,
+          "y": 203,
+          "width": 334,
+          "height": 78,
+          "top": 203,
+          "right": 362,
+          "bottom": 281,
+          "left": 28
+        },
+        "intro": null,
+        "rotate": null,
+        "jump": {
+          "x": 288,
+          "y": 716,
+          "width": 72,
+          "height": 72,
+          "top": 716,
+          "right": 360,
+          "bottom": 788,
+          "left": 288
+        },
+        "left": {
+          "x": 30,
+          "y": 723,
+          "width": 58,
+          "height": 58,
+          "top": 723,
+          "right": 88,
+          "bottom": 781,
+          "left": 30
+        },
+        "right": {
+          "x": 98,
+          "y": 723,
+          "width": 58,
+          "height": 58,
+          "top": 723,
+          "right": 156,
+          "bottom": 781,
+          "left": 98
+        },
+        "fire": {
+          "x": 223,
+          "y": 724.5,
+          "width": 55,
+          "height": 55,
+          "top": 724.5,
+          "right": 278,
+          "bottom": 779.5,
+          "left": 223
+        }
+      },
+      "dismissedRotate": {
+        "x": 30,
+        "y": 587,
+        "width": 330,
+        "height": 17,
+        "top": 587,
+        "right": 360,
+        "bottom": 604,
+        "left": 30
+      },
+      "introTutorialOverlap": false,
+      "statusTutorialOverlap": false,
+      "jumpTutorialOverlap": false
+    },
+    {
+      "name": "host pause survives restart",
+      "paused": {
+        "mode": "paused",
+        "elapsed": 0.21666666666666665
+      },
+      "resume": {
+        "mode": "paused",
+        "elapsed": 0.21666666666666665
+      },
+      "restart": {
+        "mode": "paused",
+        "elapsed": 0.21666666666666665
+      },
+      "messages": [
+        {
+          "protocol": "pepe-game/1",
+          "type": "ready",
+          "channel": "revision"
+        }
+      ]
+    },
+    {
+      "name": "host pause also guards New run from the title; valid resume releases starts",
+      "passed": true
+    },
+    {
+      "name": "valid parent resume and local restart still work",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "failedRequests": [],
+  "limitations": [
+    "Chromium software WebGL and emulated touch, not physical phones.",
+    "Onboarding clock controlled at 120 Hz, every twelfth frame rasterized; host pause uses the normal clock."
+  ]
+}

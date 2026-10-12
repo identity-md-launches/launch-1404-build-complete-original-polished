@@ -1,16 +1,8 @@
-Production verification, 2026-10-12
-Commands: npm run typecheck; npm run build; npm test
-Worker environment: PEPE_DEP_ROOT=/tmp/pepe-bros-toolchain
 
 > pepe-bros@1.0.0 typecheck
 > node scripts/tasks.mjs typecheck
 
 Typecheck passed.
-npm notice
-npm notice New major version of npm available! 11.19.0 -> 12.2.0
-npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
-npm notice To update run: npm install -g npm@12.2.0
-npm notice
 
 > pepe-bros@1.0.0 build
 > node scripts/tasks.mjs build
@@ -21,13 +13,8 @@ transforming...
 rendering chunks...
 computing gzip size...
 dist/index.html                  1.23 kB │ gzip:   0.60 kB
-dist/assets/index-DhgOIO2m.js  627.03 kB │ gzip: 187.49 kB
-✓ built in 1.48s
-npm notice
-npm notice New major version of npm available! 11.19.0 -> 12.2.0
-npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
-npm notice To update run: npm install -g npm@12.2.0
-npm notice
+dist/assets/index-BOG-vwrH.js  627.52 kB │ gzip: 187.53 kB
+✓ built in 4.20s
 
 > pepe-bros@1.0.0 test
 > node scripts/tasks.mjs test
@@ -47,8 +34,3 @@ PASS Checkpoint respawn and three deaths lead to game over
 PASS All four bosses telegraph, attack, rest and can be defeated; eight-level victory
 PASS A failed boss fight respawns at its arena and resets the attack
 PASS Manifest and export use a local, complete arcade contract
-npm notice
-npm notice New major version of npm available! 11.19.0 -> 12.2.0
-npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
-npm notice To update run: npm install -g npm@12.2.0
-npm notice

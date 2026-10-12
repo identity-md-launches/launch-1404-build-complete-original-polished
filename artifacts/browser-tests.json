@@ -1,7 +1,7 @@
 {
-  "date": "2026-10-12T12:00:51.052Z",
+  "date": "2026-10-12T13:15:10.730Z",
   "command": "node scripts/browser-check.mjs",
-  "browser": "154.0.8037.0",
+  "browser": "155.0.8059.12",
   "results": [
     {
       "name": "Measured rendered solid text/background contrast",
@@ -48,12 +48,12 @@
       },
       "heading": {
         "x": 37,
-        "y": 143,
+        "y": 112,
         "width": 316,
         "height": 48.03125,
-        "top": 143,
+        "top": 112,
         "right": 353,
-        "bottom": 191.03125,
+        "bottom": 160.03125,
         "left": 37
       }
     },
@@ -73,12 +73,12 @@
       },
       "heading": {
         "x": 26,
-        "y": 143,
+        "y": 112,
         "width": 268,
         "height": 43.640625,
-        "top": 143,
+        "top": 112,
         "right": 294,
-        "bottom": 186.640625,
+        "bottom": 155.640625,
         "left": 26
       }
     },
@@ -88,22 +88,22 @@
       "overflow": false,
       "action": {
         "x": 56,
-        "y": 449.03125,
+        "y": 415.03125,
         "width": 175.71875,
         "height": 50,
-        "top": 449.03125,
+        "top": 415.03125,
         "right": 231.71875,
-        "bottom": 499.03125,
+        "bottom": 465.03125,
         "left": 56
       },
       "heading": {
         "x": 56,
-        "y": 190,
+        "y": 156,
         "width": 440,
         "height": 125.25,
-        "top": 190,
+        "top": 156,
         "right": 496,
-        "bottom": 315.25,
+        "bottom": 281.25,
         "left": 56
       }
     },
@@ -130,7 +130,7 @@
     {
       "name": "Keyboard movement, fly collection, variable jump, P pause and frozen simulation",
       "passed": true,
-      "movedX": 6.791666666666651,
+      "movedX": 6.889999999999984,
       "jumpY": 1.1337500000000005
     },
     {
@@ -141,7 +141,8 @@
       "name": "Natural three-life game over and one-click replay",
       "passed": true,
       "endingScore": 500,
-      "endingTime": 7.875000000000181
+      "endingTime": 8.133333333333512,
+      "quality": "low"
     },
     {
       "name": "Mute preference persists across reload without autoplay",
@@ -154,8 +155,8 @@
     {
       "name": "Mobile automatic Low quality, real simultaneous touch movement/jump and pointer cancellation",
       "passed": true,
-      "jumpY": 1.9975000000000014,
-      "x": 3.6041666666666665
+      "jumpY": 2.5912500000000023,
+      "x": 4.340416666666666
     },
     {
       "name": "Landscape touch controls remain within the viewport",
@@ -163,7 +164,8 @@
     },
     {
       "name": "Opaque-origin sandbox: denied storage, channel handshake, source/channel rejection and host pause/resume",
-      "passed": true
+      "passed": true,
+      "gameOverCheckQuality": "low"
     },
     {
       "name": "Sandbox game-over score bridge emits one finite nonnegative integer",

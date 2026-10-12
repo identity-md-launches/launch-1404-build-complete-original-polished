@@ -1,0 +1,470 @@
+{
+  "date": "2026-10-12T13:09:42.739Z",
+  "command": "node scripts/browser-check.mjs",
+  "browser": "155.0.8059.12",
+  "results": [
+    {
+      "name": "Measured rendered solid text/background contrast",
+      "passed": true,
+      "contrasts": [
+        {
+          "name": "Primary action",
+          "foreground": "rgb(16, 43, 41)",
+          "background": "rgb(214, 233, 155)",
+          "ratio": 11.42
+        },
+        {
+          "name": "Secondary action",
+          "foreground": "rgb(246, 241, 215)",
+          "background": "rgb(23, 54, 50)",
+          "ratio": 11.48
+        },
+        {
+          "name": "Header muted text",
+          "foreground": "rgb(192, 204, 173)",
+          "background": "rgb(16, 43, 41)",
+          "ratio": 8.92
+        }
+      ]
+    },
+    {
+      "name": "Desktop title, local font, metadata and gesture-gated audio",
+      "passed": true,
+      "title": "Pepe Bros — A little frog. A legendary leap."
+    },
+    {
+      "name": "390px title reflow and primary action above fold",
+      "passed": true,
+      "overflow": false,
+      "action": {
+        "x": 37,
+        "y": 313.8125,
+        "width": 107.25,
+        "height": 48,
+        "top": 313.8125,
+        "right": 144.25,
+        "bottom": 361.8125,
+        "left": 37
+      },
+      "heading": {
+        "x": 37,
+        "y": 112,
+        "width": 316,
+        "height": 48.03125,
+        "top": 112,
+        "right": 353,
+        "bottom": 160.03125,
+        "left": 37
+      }
+    },
+    {
+      "name": "320px title reflow and primary action above fold",
+      "passed": true,
+      "overflow": false,
+      "action": {
+        "x": 26,
+        "y": 309.421875,
+        "width": 101.25,
+        "height": 48,
+        "top": 309.421875,
+        "right": 127.25,
+        "bottom": 357.421875,
+        "left": 26
+      },
+      "heading": {
+        "x": 26,
+        "y": 112,
+        "width": 268,
+        "height": 43.640625,
+        "top": 112,
+        "right": 294,
+        "bottom": 155.640625,
+        "left": 26
+      }
+    },
+    {
+      "name": "768px title reflow and primary action above fold",
+      "passed": true,
+      "overflow": false,
+      "action": {
+        "x": 56,
+        "y": 415.03125,
+        "width": 175.71875,
+        "height": 50,
+        "top": 415.03125,
+        "right": 231.71875,
+        "bottom": 465.03125,
+        "left": 56
+      },
+      "heading": {
+        "x": 56,
+        "y": 156,
+        "width": 440,
+        "height": 125.25,
+        "top": 156,
+        "right": 496,
+        "bottom": 281.25,
+        "left": 56
+      }
+    },
+    {
+      "name": "320px gameplay HUD with a maximum-length seed",
+      "passed": true,
+      "overflow": false,
+      "seed": "WWWWWWWWWWWWWWWWWWWWWWWW",
+      "hud": {
+        "x": 20,
+        "y": 78,
+        "width": 280,
+        "height": 135,
+        "top": 78,
+        "right": 300,
+        "bottom": 213,
+        "left": 20
+      }
+    },
+    {
+      "name": "Seed validation, valid seeded start and audio unlocked by gesture",
+      "passed": true
+    },
+    {
+      "name": "Keyboard movement, fly collection, variable jump, P pause and frozen simulation",
+      "passed": true,
+      "movedX": 6.791666666666651,
+      "jumpY": 1.1337500000000005
+    },
+    {
+      "name": "Resume, Esc pause, quality, mute and same-seed restart",
+      "passed": true
+    },
+    {
+      "name": "Natural three-life game over and one-click replay",
+      "passed": true,
+      "endingScore": 500,
+      "endingTime": 8.566666666666821,
+      "quality": "low"
+    },
+    {
+      "name": "Mute preference persists across reload without autoplay",
+      "passed": true
+    },
+    {
+      "name": "Reduced-motion media preference updates the renderer",
+      "passed": true
+    },
+    {
+      "name": "Mobile automatic Low quality, real simultaneous touch movement/jump and pointer cancellation",
+      "passed": true,
+      "jumpY": 1.9975000000000014,
+      "x": 3.6041666666666665
+    },
+    {
+      "name": "Landscape touch controls remain within the viewport",
+      "passed": true
+    },
+    {
+      "name": "Opaque-origin sandbox: denied storage, channel handshake, source/channel rejection and host pause/resume",
+      "passed": true,
+      "gameOverCheckQuality": "low"
+    },
+    {
+      "name": "Browser check failure",
+      "passed": false,
+      "error": "TimeoutError: frame.waitForFunction: Timeout 90000ms exceeded.",
+      "diagnostics": [
+        null,
+        {
+          "mode": "dying",
+          "seed": "LILY-NJVTA",
+          "score": 500,
+          "lives": 1,
+          "flies": 5,
+          "elapsed": 5.300000000000053,
+          "levelTime": 5.300000000000053,
+          "checkpoint": false,
+          "player": {
+            "x": 18.788333333333345,
+            "y": 0.4479166666666705,
+            "vx": 5.9,
+            "vy": -6.374999999999988,
+            "grounded": true,
+            "facing": 1,
+            "power": "small",
+            "invuln": 0,
+            "star": 0,
+            "squash": 0,
+            "grin": 0,
+            "height": 1.16
+          },
+          "level": {
+            "index": 0,
+            "world": 0,
+            "length": 221.37744159796273,
+            "bonus": false,
+            "pipeX": 83.10607907143422,
+            "boss": null
+          },
+          "bossCue": "",
+          "quality": "low",
+          "muted": false,
+          "audio": "running",
+          "storagePersistent": false,
+          "reducedMotion": false,
+          "fps": 15,
+          "drawCalls": 108,
+          "input": {
+            "left": false,
+            "right": true,
+            "jump": false,
+            "run": false,
+            "fire": false,
+            "down": false
+          },
+          "terrain": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 25,
+              "kind": "ground"
+            },
+            {
+              "x": 12,
+              "y": 2.7,
+              "w": 1,
+              "kind": "mystery"
+            },
+            {
+              "x": 11,
+              "y": 2.7,
+              "w": 1,
+              "kind": "brick"
+            },
+            {
+              "x": 13,
+              "y": 2.7,
+              "w": 1,
+              "kind": "brick"
+            },
+            {
+              "x": 28.09517889241688,
+              "y": 0,
+              "w": 20.600124852731824,
+              "kind": "ground"
+            },
+            {
+              "x": 32.09517889241688,
+              "y": 1.1,
+              "w": 3.4,
+              "kind": "ledge"
+            },
+            {
+              "x": 39.09517889241688,
+              "y": 1.8,
+              "w": 4,
+              "kind": "ledge"
+            },
+            {
+              "x": 40.09517889241688,
+              "y": 2.8,
+              "w": 1,
+              "kind": "mystery"
+            },
+            {
+              "x": 51.64412088328973,
+              "y": 0,
+              "w": 19.120002339594066,
+              "kind": "ground"
+            },
+            {
+              "x": 55.64412088328973,
+              "y": 1.35,
+              "w": 3.4,
+              "kind": "ledge"
+            },
+            {
+              "x": 60.64412088328973,
+              "y": 2.4,
+              "w": 3.2,
+              "kind": "ledge"
+            },
+            {
+              "x": 73.10607907143422,
+              "y": 0,
+              "w": 19.63326270505786,
+              "kind": "ground"
+            },
+            {
+              "x": 77.10607907143422,
+              "y": 1.35,
+              "w": 3.4,
+              "kind": "ledge"
+            },
+            {
+              "x": 82.10607907143422,
+              "y": 2.4,
+              "w": 3.2,
+              "kind": "ledge"
+            },
+            {
+              "x": 95.93629952119664,
+              "y": 0,
+              "w": 20.994314612820745,
+              "kind": "ground"
+            },
+            {
+              "x": 99.93629952119664,
+              "y": 1.35,
+              "w": 3.4,
+              "kind": "ledge"
+            },
+            {
+              "x": 104.93629952119664,
+              "y": 2.4,
+              "w": 3.2,
+              "kind": "ledge"
+            },
+            {
+              "x": 119.5697228619829,
+              "y": 0,
+              "w": 21.032460602000356,
+              "kind": "ground"
+            },
+            {
+              "x": 123.5697228619829,
+              "y": 1.35,
+              "w": 3.4,
+              "kind": "ledge"
+            },
+            {
+              "x": 128.56972286198288,
+              "y": 2.4,
+              "w": 3.2,
+              "kind": "ledge"
+            },
+            {
+              "x": 143.2494384272024,
+              "y": 0,
+              "w": 18.861548770219088,
+              "kind": "ground"
+            },
+            {
+              "x": 148.2494384272024,
+              "y": 2.8,
+              "w": 1,
+              "kind": "brick"
+            },
+            {
+              "x": 149.2494384272024,
+              "y": 2.8,
+              "w": 1,
+              "kind": "mystery"
+            },
+            {
+              "x": 150.2494384272024,
+              "y": 2.8,
+              "w": 1,
+              "kind": "brick"
+            },
+            {
+              "x": 164.39628988862967,
+              "y": 0,
+              "w": 18.981151709333062,
+              "kind": "ground"
+            },
+            {
+              "x": 169.39628988862967,
+              "y": 2.8,
+              "w": 1,
+              "kind": "brick"
+            },
+            {
+              "x": 170.39628988862967,
+              "y": 2.8,
+              "w": 1,
+              "kind": "mystery"
+            },
+            {
+              "x": 171.39628988862967,
+              "y": 2.8,
+              "w": 1,
+              "kind": "brick"
+            },
+            {
+              "x": 183.37744159796273,
+              "y": 0,
+              "w": 42,
+              "kind": "ground"
+            },
+            {
+              "x": 83.10607907143422,
+              "y": 1.1,
+              "w": 1.8,
+              "kind": "pipe"
+            },
+            {
+              "x": 214.37744159796273,
+              "y": 1.2,
+              "w": 2.6,
+              "kind": "ledge"
+            },
+            {
+              "x": 217.37744159796273,
+              "y": 2.4,
+              "w": 2.6,
+              "kind": "ledge"
+            }
+          ],
+          "enemies": [
+            {
+              "x": 19.5004166666669,
+              "y": 0,
+              "kind": "beetle"
+            },
+            {
+              "x": 43.23280374514887,
+              "y": 0,
+              "kind": "beetle"
+            },
+            {
+              "x": 66.7641232228838,
+              "y": 0,
+              "kind": "snail"
+            },
+            {
+              "x": 88.73934177649208,
+              "y": 0,
+              "kind": "beetle"
+            },
+            {
+              "x": 112.93061413401739,
+              "y": 0,
+              "kind": "beetle"
+            },
+            {
+              "x": 136.60218346398324,
+              "y": 0,
+              "kind": "snail"
+            },
+            {
+              "x": 158.11098719742148,
+              "y": 0,
+              "kind": "beetle"
+            },
+            {
+              "x": 179.37744159796273,
+              "y": 0,
+              "kind": "beetle"
+            }
+          ],
+          "shots": []
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "failedRequests": [],
+  "limitations": [
+    "Chromium with software WebGL; not a physical phone or hardware performance certification.",
+    "No screen-reader session or native 200% zoom test."
+  ]
+}

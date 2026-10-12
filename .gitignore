@@ -2,6 +2,7 @@
 !/dist/**
 !/artifacts/
 !/artifacts/**
+!/.imd-responses.json
 **/node_modules/
 **/.vite/
 **/.vite-cache/
